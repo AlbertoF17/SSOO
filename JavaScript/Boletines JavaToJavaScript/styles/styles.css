@@ -11,7 +11,12 @@ body{
 }
 
 header {
-    text-align: center;
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
     background-color: rgb(0, 113, 179);
 }
 
@@ -21,6 +26,10 @@ header h1 {
     font-size: 4rem;
 }
 
+.hueco-header{
+    height: 15vh;
+}
+
 .contenido-index {
     display: flex;
     flex-direction: row;
@@ -28,11 +37,102 @@ header h1 {
     align-items: center;
     justify-content: space-around;
     gap: 2rem;
+    padding: 1rem;
 }
 
 .contenido-index div{
+    border-radius: 1rem;
     padding: 1rem;
     width: 20vw;
     height: 20vh;
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.contenido-boletin2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.ejercicio {
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 20vw;
+    height: 50vh;
+    background-color: rgb(2, 162, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.ejercicio h3 {
+    margin: 0;
+}
+
+.resultado {
+    padding: 0.5rem;
+    width: 18vw;
+    height: 30vh;
+    background-color: black;
+    color: lightgray;
+    margin: 0;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.resultado p {
+    margin: 0;
+}
+
+.botones {
+    display: flex;
+    width: 100%;
+    align-items: space-around;
+    justify-content: space-around;
+}
+
+.ejercicio button {
+    cursor: pointer;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    background-color: rgb(0, 113, 179);
+    color: white;
+    border: none;
+    border-radius: 1rem;
+}
+
+.contenido-index a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+  
+.contenido-index div:hover {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    box-shadow: 0 1rem 2rem -1rem rgba(0,0,0,0.57);
+    position: relative;
+    top: -3px;
+    left: -3px;
+    transition: all 0.1s;
+}
+
+footer{
+    margin: 0;
+    padding: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: rgb(0, 113, 179);
+
 }
