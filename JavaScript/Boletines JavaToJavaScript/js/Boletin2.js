@@ -90,39 +90,128 @@ borrarEj5.onclick = function borarEjercicio() {
     let ej = document.querySelector("#ej5");
     ej.innerHTML = ``
 }
-/*
+
 //6. Modificarla sumándole 1 y multiplicando por 48 e imprimir el resto de dividirla entre 46.
-console.log("Ejercicio 6: ");
 var1 = ((var1 + 1) * 48);
-console.log(var1 % 46);
+let realizarEj6 = document.querySelector("#realizar-ej6");
+realizarEj6.onclick = function realizarEjercicio() {
+    alert("6. Modificarla sumándole 1 y multiplicando por 48 e imprimir el resto de dividirla entre 46.");
+    let ej = document.querySelector("#ej6");
+    ej.innerHTML = `<p>var1 = ((var1 + 1) * 48);</p>` + `<p>var1%46= ${var1%46}`
+}
+let borrarEj6 = document.querySelector("#borrar-ej6");
+borrarEj6.onclick = function borarEjercicio() {
+    let ej = document.querySelector("#ej6");
+    ej.innerHTML = ``
+}
+
 
 //7. Sin modificar el valor de la variable, imprimir por pantalla el resultado de elevarla al cuadrado.
-console.log("Ejercicio 7: ");
-console.log(var1 * var1);
-console.log(Math.pow(var1, 2));
+let realizarEj7 = document.querySelector("#realizar-ej7");
+realizarEj7.onclick = function realizarEjercicio() {
+    alert("7. Sin modificar el valor de la variable, imprimir por pantalla el resultado de elevarla al cuadrado.");
+    let ej = document.querySelector("#ej7");
+    ej.innerHTML = `<p>var1^2= ${var1*var1}`
+}
+let borrarEj7 = document.querySelector("#borrar-ej7");
+borrarEj7.onclick = function borarEjercicio() {
+    let ej = document.querySelector("#ej7");
+    ej.innerHTML = ``
+}
+
 
 //8. Crear dos variables de tipo float, dándoles un valor inicial e imprimiéndolas por pantalla.
-console.log("Ejercicio 8: ");
-let x = prompt("Introduzca el primer numero: ");
-let y = prompt("Introduzca el segundo numero: ");
-console.log("El primer numero vale: " + x + "\n" + "El segundo numero vale: " + y);
+let realizarEj8 = document.querySelector("#realizar-ej8");
+realizarEj8.onclick = function realizarEjercicio() {
+    alert("8. Crear dos variables de tipo float, dándoles un valor inicial e imprimiéndolas por pantalla.");
+    let x = prompt("Introduzca el primer numero: ");
+    let y = prompt("Introduzca el segundo numero: ");
+    let ej = document.querySelector("#ej8");
+    ej.innerHTML = `<p>El primer número vale: ${x}</p><p>El segundo número vale: ${y}</p>`
+}
+let borrarEj8 = document.querySelector("#borrar-ej8");
+borrarEj8.onclick = function borarEjercicio() {
+    let ej = document.querySelector("#ej8");
+    ej.innerHTML = ``
+}
+
 
 //9. Imprimir por pantalla el resultado de comprobar si la primera es mayor que la segunda.
-console.log("Ejercicio 9: ");
-console.log(x > y); //false significa q x es menor que y; true significa que y es menor que x
+let realizarEj9 = document.querySelector("#realizar-ej9");
+realizarEj9.onclick = function realizarEjercicio() {
+    alert("9. Imprimir por pantalla el resultado de comprobar si la primera es mayor que la segunda.");
+    let ej = document.querySelector("#ej9");
+    if (x > y){
+        ej.innerHTML = `<p>El primer número es mayor que el segundo</p>`
+    } else if (x < y){
+        ej.innerHTML = `<p>El segundo número es mayor que el primero</p><p>${x} < ${y}</p>`
+    } else {
+        ej.innerHTML = `<p>Ambos números son iguales</p><p>${x} = ${y}</p>`
+    }
+}
+let borrarEj9 = document.querySelector("#borrar-ej9");
+borrarEj9.onclick = function borarEjercicio() {
+    let ej = document.querySelector("#ej9");
+    ej.innerHTML = ``
+}
 
 //10. Cambiar la primera con el valor de la segunda multiplicado por dos, y volver a imprimir por pantalla
 //el resultado de la comprobación anterior.
-console.log("Ejercicio 10: ");
-x = y * 2;
-console.log(x > y);
+let realizarEj10 = document.querySelector("#realizar-ej10");
+realizarEj10.onclick = function realizarEjercicio() {
+    alert("10. Cambiar la primera con el valor de la segunda multiplicado por dos, y volver a imprimir por pantalla el resultado de la comprobación anterior.");
+    x = y * 2;
+    let ej = document.querySelector("#ej10");
+    ej.innerHTML = `<p>El primer número vale: ${x}</p><p>El segundo número vale: ${y}</p>`
+    if (x > y){
+        ej.innerHTML = `<p>El primer número es mayor que el segundo</p>`
+    } else if (x < y){
+        ej.innerHTML = `<p>El segundo número es mayor que el primero</p><p>${x} < ${y}</p>`
+    } else {
+        ej.innerHTML = `<p>Ambos números son iguales</p><p>${x} = ${y}</p>`
+    }
+}
+let borrarEj10 = document.querySelector("#borrar-ej10");
+borrarEj10.onclick = function borarEjercicio() {
+    let ej = document.querySelector("#ej10");
+    ej.innerHTML = ``
+}
 
 //11. Imprimir por pantalla el resultado de comprobar si la primera es menor o igual que la segunda.
-console.log("Ejercicio 11: ");
-console.log(x <= y);
+let realizarEj11 = document.querySelector("#realizar-ej11");
+realizarEj11.onclick = function realizarEjercicio() {
+    alert("11. Imprimir por pantalla el resultado de comprobar si la primera es menor o igual que la segunda.");
+    let ej = document.querySelector("#ej11");
+    ej.innerHTML = `<p>El primer número vale: ${x}</p><p>El segundo número vale: ${y}</p>`
+    if (x <= y){
+        ej.innerHTML = `<p>El primer número es menor o igual que el segundo.</p><p>${x} <= ${y}</p>`
+    } else {
+        ej.innerHTML = `<p>El primer número es mayor que el segundo</p><p>${x} > ${y}</p>`
+    }
+}
+let borrarEj11 = document.querySelector("#borrar-ej11");
+borrarEj11.onclick = function borarEjercicio() {
+    let ej = document.querySelector("#ej11");
+    ej.innerHTML = ``
+}
 
 //12. Repetir el ejercicio anterior pero almacenando el resultado de la comprobación
 //en una variable, e imprimiendo después por pantalla dicha variable.
-console.log("Ejercicio 12: ");
-let menorIgual = x <= y;
-console.log(menorIgual);*/
+let realizarEj12 = document.querySelector("#realizar-ej12");
+realizarEj12.onclick = function realizarEjercicio() {
+    alert("12. Repetir el ejercicio anterior pero almacenando el resultado de la comprobación en una variable, e imprimiendo después por pantalla dicha variable.");
+    let menorIgual = x <= y;
+    let ej = document.querySelector("#ej12");
+    ej.innerHTML = `<p>El primer número vale: ${x}</p><p>El segundo número vale: ${y}</p>`
+    if (menorIgual){
+        ej.innerHTML = `<p>El primer número es menor o igual que el segundo.</p><p>variable "menorIgual" = ${menorIgual}</p>`
+    } else {
+        ej.innerHTML = `<p>El primer número es mayor que el segundo</p><p>variable "menorIgual" = ${menorIgual}</p>`
+    }
+}
+let borrarEj12 = document.querySelector("#borrar-ej12");
+borrarEj12.onclick = function borarEjercicio() {
+    let ej = document.querySelector("#ej12");
+    ej.innerHTML = ``
+}
+//A PARTIR DEL 9 NO FUNCIONA POR EL USO DE VARIABLES "INDEFINIDAS"
