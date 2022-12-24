@@ -140,27 +140,27 @@ borrarEj7.onclick = function borarEjercicio() {
     ej.innerHTML = ``
 }
 /*
-    //8. Crea un programa que lea el precio sin IVA de tres productos e imprima
-    //el valor total con IVA que paga el comprador, así como el valor medio con y sin IVA.
-    console.log("Ejercicio 8: ");
-    let prod1 = Number.parseInt(prompt("Introduzca el precio sin IVA del producto 1: "));
-    let prod2 = Number.parseInt(prompt("Introduzca el precio sin IVA del producto 2: "));
-    let prod3 = Number.parseInt(prompt("Introduzca el precio sin IVA del producto 3: "));
-    let precioSinIVA = prod1 + prod2 + prod3;
-    let precioConIVA = precioSinIVA * 1.21;
-    console.log("El valor total de la compra (IVA incluido) es: " + precioConIVA + "euros");
-    console.log("El valor medio del precio con/sin IVA es: " + (precioSinIVA + precioConIVA) / 2 + "euros");
+//8. Crea un programa que lea el precio sin IVA de tres productos e imprima
+//el valor total con IVA que paga el comprador, así como el valor medio con y sin IVA.
+console.log("Ejercicio 8: ");
+let prod1 = Number.parseInt(prompt("Introduzca el precio sin IVA del producto 1: "));
+let prod2 = Number.parseInt(prompt("Introduzca el precio sin IVA del producto 2: "));
+let prod3 = Number.parseInt(prompt("Introduzca el precio sin IVA del producto 3: "));
+let precioSinIVA = prod1 + prod2 + prod3;
+let precioConIVA = precioSinIVA * 1.21;
+console.log("El valor total de la compra (IVA incluido) es: " + precioConIVA + "euros");
+console.log("El valor medio del precio con/sin IVA es: " + (precioSinIVA + precioConIVA) / 2 + "euros");
 
-    //9. Crea un programa que lea el nombre de una persona, y a continuación su edad
-    //y altura, e imprima todo por pantalla en una misma línea. ¿Funciona?
-    console.log("Ejercicio 9: ");
-    let nombre1 = prompt("Introduzca su nombre: ");
-    let edad1 = prompt("Introduzca su edad");
-    let altura1 = prompt("Introduzca su altura: ");
-    console.log("Nombre: " + nombre1 + "; Edad: " + edad1 + "; Altura: " + altura1);
+//9. Crea un programa que lea el nombre de una persona, y a continuación su edad
+//y altura, e imprima todo por pantalla en una misma línea. ¿Funciona?
+console.log("Ejercicio 9: ");
+let nombre1 = prompt("Introduzca su nombre: ");
+let edad1 = prompt("Introduzca su edad");
+let altura1 = prompt("Introduzca su altura: ");
+console.log("Nombre: " + nombre1 + "; Edad: " + edad1 + "; Altura: " + altura1);
 
-    //10. Repita el ejercicio anterior pero leyendo primero los números y después el nombre. ¿Funciona?
-    let edad2 = prompt("Introduzca su edad: ");
-    let altura2 = prompt("Introduzca su altura: ");
-    let nombre2 = prompt("Introduzca su nombre: ");
-    console.log("Edad: " + edad2 + "; Altura: " + altura2 + "; Nombre: " + nombre2);*/
+//10. Repita el ejercicio anterior pero leyendo primero los números y después el nombre. ¿Funciona?
+let edad2 = prompt("Introduzca su edad: ");
+let altura2 = prompt("Introduzca su altura: ");
+let nombre2 = prompt("Introduzca su nombre: ");
+console.log("Edad: " + edad2 + "; Altura: " + altura2 + "; Nombre: " + nombre2);*/
