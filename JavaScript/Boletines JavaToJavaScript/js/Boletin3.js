@@ -20,28 +20,52 @@ let realizarEj2 = document.querySelector("#realizar-ej2");
 let edad;
 realizarEj2.onclick = function realizarEjercicio() {
     alert("2. Lee por pantalla una edad y almacénalo en una variable. Imprime la variable por pantalla.");
-    nombre = prompt("Escriba su edad:");
+    edad = prompt("Escriba su edad:");
     let ej = document.querySelector("#ej2");
-    ej.innerHTML = `<p>Su edad es:</p>` + `<p>${nombre} años</p>`;
+    ej.innerHTML = `<p>Su edad es:</p>` + `<p>${edad} años</p>`;
 }
 let borrarEj2 = document.querySelector("#borrar-ej2");
 borrarEj2.onclick = function borarEjercicio() {
     let ej = document.querySelector("#ej2");
     ej.innerHTML = ``
 }
+
+//3. ¿Pueden modificarse los ejercicios anteriores para ahorrarse la variable?
+let realizarEj3 = document.querySelector("#realizar-ej3");
+realizarEj3.onclick = function realizarEjercicio() {
+    alert("3. ¿Pueden modificarse los ejercicios anteriores para ahorrarse la variable?");
+    prompt("Escriba su nombre:");
+    prompt("Escriba su edad:");
+    let ej = document.querySelector("#ej3");
+    ej.innerHTML = `<p>No es posible ya que los datos introducidos no se han guardado</p>`;
+}
+let borrarEj3 = document.querySelector("#borrar-ej3");
+borrarEj3.onclick = function borarEjercicio() {
+    let ej = document.querySelector("#ej3");
+    ej.innerHTML = ``
+}
+
+//4.a Lee por pantalla una temperatura en grados Celsius e imprímela por pantalla.
+let temp;
+let realizarEj4a = document.querySelector("#realizar-ej4a");
+realizarEj4a.onclick = function realizarEjercicio() {
+    alert("4.a Lee por pantalla una temperatura en grados Celsius e imprímela por pantalla.");
+    temp = Number.parseInt(prompt("Introduzca una temperatura en Celsius"));
+    let tempKelvin = temp+273.15;
+    let ej = document.querySelector("#ej4a");
+    ej.innerHTML = `<p>${temp} ºC = ${tempKelvin} K</p>`;
+}
+let borrarEj4a = document.querySelector("#borrar-ej4a");
+borrarEj4a.onclick = function borarEjercicio() {
+    let ej = document.querySelector("#ej4a");
+    ej.innerHTML = ``
+}
 /*
-    //3. ¿Pueden modificarse los ejercicios anteriores para ahorrarse la variable?
-    console.log("Ejercicio 3: (no)");
-    //No
+console.log("La temperatura es: " + temp + " grados");
 
-    //4.a Lee por pantalla una temperatura en grados Celsius e imprímela por pantalla.
-    console.log("Ejercicio 4a: ");
-    let temp = Number.parseInt(prompt("Introduzca una temperatura en Celsius"));
-    console.log("La temperatura es: " + temp + " grados");
-
-    //4.b Repite, pero imprimiendo por pantalla en grados Kelvin (hay que convertir).
-    console.log("Ejercicio 4b: ");
-    console.log(temp + " grados Celsius son " + (temp + 273.15) + " grados Kelvin");
+//4.b Repite, pero imprimiendo por pantalla en grados Kelvin (hay que convertir).
+console.log("Ejercicio 4b: ");
+console.log(temp + " grados Celsius son " + (temp + 273.15) + " grados Kelvin");
 
     //5. Crea un programa que calcule el área de un rectángulo (base x altura),
     //pidiendo por pantalla los datos necesarios.
