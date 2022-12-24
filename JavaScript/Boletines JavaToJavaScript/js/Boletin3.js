@@ -50,53 +50,96 @@ let temp;
 let realizarEj4a = document.querySelector("#realizar-ej4a");
 realizarEj4a.onclick = function realizarEjercicio() {
     alert("4.a Lee por pantalla una temperatura en grados Celsius e imprímela por pantalla.");
-    temp = Number.parseInt(prompt("Introduzca una temperatura en Celsius"));
-    let tempKelvin = temp+273.15;
+    temp = Number.parseFloat(prompt("Introduzca una temperatura en Celsius;"));
     let ej = document.querySelector("#ej4a");
-    ej.innerHTML = `<p>${temp} ºC = ${tempKelvin} K</p>`;
+    ej.innerHTML = `<p>${temp} ºC</p>`;
 }
 let borrarEj4a = document.querySelector("#borrar-ej4a");
 borrarEj4a.onclick = function borarEjercicio() {
     let ej = document.querySelector("#ej4a");
     ej.innerHTML = ``
 }
-/*
-console.log("La temperatura es: " + temp + " grados");
 
 //4.b Repite, pero imprimiendo por pantalla en grados Kelvin (hay que convertir).
-console.log("Ejercicio 4b: ");
-console.log(temp + " grados Celsius son " + (temp + 273.15) + " grados Kelvin");
+let realizarEj4b = document.querySelector("#realizar-ej4b");
+realizarEj4b.onclick = function realizarEjercicio() {
+    alert("4.b Repite, pero imprimiendo por pantalla en grados Kelvin (hay que convertir).");
+    temp = Number.parseFloat(prompt("Introduzca una temperatura en Celsius:"));
+    let tempKelvin = temp+273.15;
+    let ej = document.querySelector("#ej4b");
+    ej.innerHTML = `<p>${temp} ºC = ${tempKelvin} K</p>`;
+}
+let borrarEj4b = document.querySelector("#borrar-ej4b");
+borrarEj4b.onclick = function borarEjercicio() {
+    let ej = document.querySelector("#ej4b");
+    ej.innerHTML = ``
+}
 
-    //5. Crea un programa que calcule el área de un rectángulo (base x altura),
-    //pidiendo por pantalla los datos necesarios.
-    console.log("Ejercicio 5: ");
-    let base = Number.parseInt(prompt("Introduzca la base del rectángulo: "));
-    let altura = Number.parseInt(prompt("Introduzca la altura del rectángulo: "));
-    console.log("El area del rectángulo es: " + (base * altura)/2 + " metros cuadrados");
+//5. Crea un programa que calcule el área de un rectángulo (base x altura),
+//pidiendo por pantalla los datos necesarios.
+let base;
+let altura;
+let area;
+let realizarEj5 = document.querySelector("#realizar-ej5");
+realizarEj5.onclick = function realizarEjercicio() {
+    alert("5. Crea un programa que calcule el área de un rectángulo (base x altura), pidiendo por pantalla los datos necesarios.");
+    base = Number.parseFloat(prompt("Introduzca la base del rectángulo: "));
+    altura = Number.parseFloat(prompt("Introduzca la altura del rectángulo: "));
+    area = (base*altura)/2;
+    let ej = document.querySelector("#ej5");
+    ej.innerHTML = `<p>El área del rectángulo es: ${area} metros cuadrados</p>`;
+}
+let borrarEj5 = document.querySelector("#borrar-ej5");
+borrarEj5.onclick = function borarEjercicio() {
+    let ej = document.querySelector("#ej5");
+    ej.innerHTML = ``
+}
 
-    //6. Crea un programa que calcule el Índice de Masa Corporal (IMC), pidiendo
-    //por pantalla los datos necesarios.
-    console.log("Ejercicio 6: ");
-    let peso = Number.parseInt(prompt("Introduzca su peso en kilos: "));
-    let alto = Number.parseInt(prompt("Introduzca su altura en metros: "));
+//6. Crea un programa que calcule el Índice de Masa Corporal (IMC), pidiendo
+//por pantalla los datos necesarios.
+let peso;
+let alto;
+let realizarEj6 = document.querySelector("#realizar-ej6");
+realizarEj6.onclick = function realizarEjercicio() {
+    alert("6. Crea un programa que calcule el Índice de Masa Corporal (IMC), pidiendo por pantalla los datos necesarios.");
+    peso = Number.parseFloat(prompt("Introduzca su peso en kilos: "));
+    alto = Number.parseFloat(prompt("Introduzca su altura en metros: "));
     let IMC = peso / (alto * alto);
-    console.log("Su IMC es: " + IMC);
+    let ej = document.querySelector("#ej6");
     if (IMC < 18.5) {
-        console.log("Usted es calificada como persona de bajo peso");
+        ej.innerHTML = `<p>Usted es calificada como persona de bajo peso</p>`
     } else if (IMC >= 18.5 && IMC <= 24.9) {
-        console.log("Usted es calificada como persona con peso normal");
+        ej.innerHTML = `<p>Usted es calificada como persona con peso normal</p>`
     } else if (IMC >= 25 && IMC <= 29.9) {
-        console.log("Usted es calificada como persona con sobrepeso");
+        ej.innerHTML = `<p>Usted es calificada como persona con sobrepeso</p>`
     } else {
-        console.log("Usted es calificada como persona con obesidad");
+        ej.innerHTML = `<p>Usted es calificada como persona con obesidad</p>`
     }
+}
+let borrarEj6 = document.querySelector("#borrar-ej6");
+borrarEj6.onclick = function borarEjercicio() {
+    let ej = document.querySelector("#ej6");
+    ej.innerHTML = ``
+}
 
-    //7. Crea un programa que lea el precio sin IVA de un producto e imprima
-    //el valor final con IVA del mismo.
-    console.log("Ejercicio 7: ");
-    let precio = Number.parseInt(prompt("Introduzca el precio sin IVA: "));
-    console.log("El precio con IVA es: " + (precio * 1.21));
 
+//7. Crea un programa que lea el precio sin IVA de un producto e imprima
+//el valor final con IVA del mismo.
+let precio;
+let realizarEj7 = document.querySelector("#realizar-ej7");
+realizarEj7.onclick = function realizarEjercicio() {
+    alert("7. Crea un programa que lea el precio sin IVA de un producto e imprima el valor final con IVA del mismo.");
+    precio = Number.parseFloat(prompt("Introduzca el precio sin IVA: "));
+    let precioIVA = precio*1.21;
+    let ej = document.querySelector("#ej7");
+    ej.innerHTML = `<p>El precio sin IVA es: ${precio}€</p>` + `<p>El precio sin IVA es: ${precioIVA}€</p>`;
+}
+let borrarEj7 = document.querySelector("#borrar-ej7");
+borrarEj7.onclick = function borarEjercicio() {
+    let ej = document.querySelector("#ej7");
+    ej.innerHTML = ``
+}
+/*
     //8. Crea un programa que lea el precio sin IVA de tres productos e imprima
     //el valor total con IVA que paga el comprador, así como el valor medio con y sin IVA.
     console.log("Ejercicio 8: ");
