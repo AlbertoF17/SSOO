@@ -1,10 +1,20 @@
 // BOLETIN 3
-    console.log("BOLETIN 3");
-    //1. Lee por pantalla un nombre y almacénalo en una variable. Imprime la variable por pantalla.
-    console.log("Ejercicio 1: ");
-    let nombre = prompt("Introduzca su nombre: ");
-    console.log("Su nombre es: " + nombre);
 
+//1. Lee por pantalla un nombre y almacénalo en una variable. Imprime la variable por pantalla.
+let realizarEj1 = document.querySelector("#realizar-ej1");
+let nombre;
+realizarEj1.onclick = function realizarEjercicio() {
+    alert("1. Lee por pantalla un nombre y almacénalo en una variable. Imprime la variable por pantalla.");
+    nombre = prompt("Escriba su nombre:");
+    let ej = document.querySelector("#ej1");
+    ej.innerHTML = `<p>Su nombre es:</p>` + `<p>${nombre}</p>`;
+}
+let borrarEj1 = document.querySelector("#borrar-ej1");
+borrarEj1.onclick = function borarEjercicio() {
+    let ej = document.querySelector("#ej1");
+    ej.innerHTML = ``
+}
+/*
     //2. Lee por pantalla una edad y almacénalo en una variable. Imprime la variable por pantalla.
     console.log("Ejercicio 2: ");
     let edad = prompt("Introduzca su edad: ");
@@ -76,4 +86,4 @@
     let edad2 = prompt("Introduzca su edad: ");
     let altura2 = prompt("Introduzca su altura: ");
     let nombre2 = prompt("Introduzca su nombre: ");
-    console.log("Edad: " + edad2 + "; Altura: " + altura2 + "; Nombre: " + nombre2);
+    console.log("Edad: " + edad2 + "; Altura: " + altura2 + "; Nombre: " + nombre2);*/
