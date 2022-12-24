@@ -10,7 +10,7 @@ realizarEj1.onclick = function realizarEjercicio() {
     ej.innerHTML = `<p>Su nombre es:</p>` + `<p>${nombre}</p>`;
 }
 let borrarEj1 = document.querySelector("#borrar-ej1");
-borrarEj1.onclick = function borarEjercicio() {
+borrarEj1.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej1");
     ej.innerHTML = ``
 }
@@ -25,7 +25,7 @@ realizarEj2.onclick = function realizarEjercicio() {
     ej.innerHTML = `<p>Su edad es:</p>` + `<p>${edad} años</p>`;
 }
 let borrarEj2 = document.querySelector("#borrar-ej2");
-borrarEj2.onclick = function borarEjercicio() {
+borrarEj2.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej2");
     ej.innerHTML = ``
 }
@@ -40,7 +40,7 @@ realizarEj3.onclick = function realizarEjercicio() {
     ej.innerHTML = `<p>No es posible ya que los datos introducidos no se han guardado</p>`;
 }
 let borrarEj3 = document.querySelector("#borrar-ej3");
-borrarEj3.onclick = function borarEjercicio() {
+borrarEj3.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej3");
     ej.innerHTML = ``
 }
@@ -55,7 +55,7 @@ realizarEj4a.onclick = function realizarEjercicio() {
     ej.innerHTML = `<p>${temp} ºC</p>`;
 }
 let borrarEj4a = document.querySelector("#borrar-ej4a");
-borrarEj4a.onclick = function borarEjercicio() {
+borrarEj4a.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej4a");
     ej.innerHTML = ``
 }
@@ -70,7 +70,7 @@ realizarEj4b.onclick = function realizarEjercicio() {
     ej.innerHTML = `<p>${temp} ºC = ${tempKelvin} K</p>`;
 }
 let borrarEj4b = document.querySelector("#borrar-ej4b");
-borrarEj4b.onclick = function borarEjercicio() {
+borrarEj4b.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej4b");
     ej.innerHTML = ``
 }
@@ -90,7 +90,7 @@ realizarEj5.onclick = function realizarEjercicio() {
     ej.innerHTML = `<p>El área del rectángulo es: ${area} metros cuadrados</p>`;
 }
 let borrarEj5 = document.querySelector("#borrar-ej5");
-borrarEj5.onclick = function borarEjercicio() {
+borrarEj5.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej5");
     ej.innerHTML = ``
 }
@@ -117,7 +117,7 @@ realizarEj6.onclick = function realizarEjercicio() {
     }
 }
 let borrarEj6 = document.querySelector("#borrar-ej6");
-borrarEj6.onclick = function borarEjercicio() {
+borrarEj6.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej6");
     ej.innerHTML = ``
 }
@@ -132,35 +132,72 @@ realizarEj7.onclick = function realizarEjercicio() {
     precio = Number.parseFloat(prompt("Introduzca el precio sin IVA: "));
     let precioIVA = precio*1.21;
     let ej = document.querySelector("#ej7");
-    ej.innerHTML = `<p>El precio sin IVA es: ${precio}€</p>` + `<p>El precio sin IVA es: ${precioIVA}€</p>`;
+    ej.innerHTML = `<p>El precio sin IVA es: ${precio}€</p>` + `<p>El precio con IVA es: ${precioIVA}€</p>`;
 }
 let borrarEj7 = document.querySelector("#borrar-ej7");
-borrarEj7.onclick = function borarEjercicio() {
+borrarEj7.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej7");
     ej.innerHTML = ``
 }
-/*
+
 //8. Crea un programa que lea el precio sin IVA de tres productos e imprima
 //el valor total con IVA que paga el comprador, así como el valor medio con y sin IVA.
-console.log("Ejercicio 8: ");
-let prod1 = Number.parseInt(prompt("Introduzca el precio sin IVA del producto 1: "));
-let prod2 = Number.parseInt(prompt("Introduzca el precio sin IVA del producto 2: "));
-let prod3 = Number.parseInt(prompt("Introduzca el precio sin IVA del producto 3: "));
-let precioSinIVA = prod1 + prod2 + prod3;
-let precioConIVA = precioSinIVA * 1.21;
-console.log("El valor total de la compra (IVA incluido) es: " + precioConIVA + "euros");
-console.log("El valor medio del precio con/sin IVA es: " + (precioSinIVA + precioConIVA) / 2 + "euros");
+let prod1;
+let prod2;
+let prod3;
+let realizarEj8 = document.querySelector("#realizar-ej8");
+realizarEj8.onclick = function realizarEjercicio() {
+    alert("8. Crea un programa que lea el precio sin IVA de tres productos e imprima el valor total con IVA que paga el comprador, así como el valor medio con y sin IVA.");
+    prod1 = Number.parseFloat(prompt("Introduzca el precio sin IVA del producto 1: "));
+    prod2 = Number.parseFloat(prompt("Introduzca el precio sin IVA del producto 2: "));
+    prod3 = Number.parset(prompt("Introduzca el precio sin IVA del producto 3: "));
+    let precioSinIVA = prod1 + prod2 + prod3;
+    let precioConIVA = precioSinIVA * 1.21;
+    let precioMedio = (precioSinIVA + precioConIVA) / 2;
+    let ej = document.querySelector("#ej8");
+    ej.innerHTML = `<p>El precio total sin IVA es: ${precioSinIVA}€</p>` +
+    `<p>El precio total con IVA es: ${precioConIVA}€</p>` + 
+    `<p>El valor medio del precio con/sin IVA es: ${precioMedio}</p>`;
+}
+let borrarEj8 = document.querySelector("#borrar-ej8");
+borrarEj8.onclick = function borrarEjercicio() {
+    let ej = document.querySelector("#ej8");
+    ej.innerHTML = ``
+}
+
 
 //9. Crea un programa que lea el nombre de una persona, y a continuación su edad
 //y altura, e imprima todo por pantalla en una misma línea. ¿Funciona?
-console.log("Ejercicio 9: ");
-let nombre1 = prompt("Introduzca su nombre: ");
-let edad1 = prompt("Introduzca su edad");
-let altura1 = prompt("Introduzca su altura: ");
-console.log("Nombre: " + nombre1 + "; Edad: " + edad1 + "; Altura: " + altura1);
+let nombre1;
+let edad1;
+let altura1;
+let realizarEj9 = document.querySelector("#realizar-ej9");
+realizarEj9.onclick = function realizarEjercicio() {
+    alert("9. Crea un programa que lea el nombre de una persona, y a continuación su edad y altura, e imprima todo por pantalla en una misma línea. ¿Funciona?");
+    nombre1 = prompt("Introduzca su nombre: ");
+    edad1 = prompt("Introduzca su edad");
+    altura1 = prompt("Introduzca su altura: ");
+    let ej = document.querySelector("#ej9");
+    ej.innerHTML = `<p>${nombre1}, ${edad1}, ${altura1}</p>` + `<p>Funciona</p>`;
+}
+let borrarEj9 = document.querySelector("#borrar-ej9");
+borrarEj9.onclick = function borrarEjercicio() {
+    let ej = document.querySelector("#ej9");
+    ej.innerHTML = ``
+}
 
 //10. Repita el ejercicio anterior pero leyendo primero los números y después el nombre. ¿Funciona?
-let edad2 = prompt("Introduzca su edad: ");
-let altura2 = prompt("Introduzca su altura: ");
-let nombre2 = prompt("Introduzca su nombre: ");
-console.log("Edad: " + edad2 + "; Altura: " + altura2 + "; Nombre: " + nombre2);*/
+let realizarEj10 = document.querySelector("#realizar-ej10");
+realizarEj10.onclick = function realizarEjercicio() {
+    alert("10. Repita el ejercicio anterior pero leyendo primero los números y después el nombre. ¿Funciona?");
+    edad1 = prompt("Introduzca su edad");
+    altura1 = prompt("Introduzca su altura: ");
+    nombre1 = prompt("Introduzca su nombre: ");
+    let ej = document.querySelector("#ej10");
+    ej.innerHTML = `<p>${nombre1}, ${edad1}, ${altura1}</p>` + `<p>Funciona</p>`;
+}
+let borrarEj10 = document.querySelector("#borrar-ej10");
+borrarEj10.onclick = function borrarEjercicio() {
+    let ej = document.querySelector("#ej10");
+    ej.innerHTML = ``
+}

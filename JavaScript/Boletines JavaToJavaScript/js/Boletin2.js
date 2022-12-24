@@ -10,7 +10,7 @@ realizarEj1.onclick = function realizarEjercicio() {
     ej.innerHTML = `<p>let variable1;</p>` + `<p>Se ha impreso: ${variable1}</p>`;
 }
 let borrarEj1 = document.querySelector("#borrar-ej1");
-borrarEj1.onclick = function borarEjercicio() {
+borrarEj1.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej1");
     ej.innerHTML = ``
 }
@@ -26,7 +26,7 @@ realizarEj2a.onclick = function realizarEjercicio() {
     ej.innerHTML = `<p>let valor0 = 0;</p>` + `<p>valor0 += 3;</p>` + `<p>RESULTADO: variable1 = ${valor0}</p>`;
 }
 let borrarEj2a = document.querySelector("#borrar-ej2a");
-borrarEj2a.onclick = function borarEjercicio() {
+borrarEj2a.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej2a");
     ej.innerHTML = ``;
 }
@@ -40,7 +40,7 @@ realizarEj2b.onclick = function realizarEjercicio() {
     ej.innerHTML = `<p>Valor de "valor0": 3</p>` + `<p>valor0--;</p>` + `<p>Valor de "valor0": ${valor0}</p>`;
 }
 let borrarEj2b = document.querySelector("#borrar-ej2b");
-borrarEj2b.onclick = function borarEjercicio() {
+borrarEj2b.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej2b");
     ej.innerHTML = ``;
 }
@@ -58,7 +58,7 @@ realizarEj3.onclick = function realizarEjercicio() {
     ej.innerHTML += `<p>valor0++;</p>` + `<p>valor0++;</p>` + `<p>valor0++;</p>` + `<p>valor0++;</p>` + `<p>Valor de "valor0": ${valor0}</p>`;
 }
 let borrarEj3 = document.querySelector("#borrar-ej3");
-borrarEj3.onclick = function borarEjercicio() {
+borrarEj3.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej3");
     ej.innerHTML = ``;
 }
@@ -72,7 +72,7 @@ realizarEj4.onclick = function realizarEjercicio() {
     ej.innerHTML = `<p>let var1= ${var1}`;
 }
 let borrarEj4 = document.querySelector("#borrar-ej4");
-borrarEj4.onclick = function borarEjercicio() {
+borrarEj4.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej4");
     ej.innerHTML = ``;
 }
@@ -86,7 +86,7 @@ realizarEj5.onclick = function realizarEjercicio() {
     ej.innerHTML = `<p>var1 = var1 / 50;</p>` + `<p>var1= ${var1}`;
 }
 let borrarEj5 = document.querySelector("#borrar-ej5");
-borrarEj5.onclick = function borarEjercicio() {
+borrarEj5.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej5");
     ej.innerHTML = ``;
 }
@@ -100,7 +100,7 @@ realizarEj6.onclick = function realizarEjercicio() {
     ej.innerHTML = `<p>var1 = ((var1 + 1) * 48);</p>` + `<p>var1%46= ${var1 % 46}`;
 }
 let borrarEj6 = document.querySelector("#borrar-ej6");
-borrarEj6.onclick = function borarEjercicio() {
+borrarEj6.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej6");
     ej.innerHTML = ``;
 }
@@ -114,7 +114,7 @@ realizarEj7.onclick = function realizarEjercicio() {
     ej.innerHTML = `<p>var1^2= ${var1 * var1}`;
 }
 let borrarEj7 = document.querySelector("#borrar-ej7");
-borrarEj7.onclick = function borarEjercicio() {
+borrarEj7.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej7");
     ej.innerHTML = ``;
 }
@@ -132,7 +132,7 @@ realizarEj8.onclick = function realizarEjercicio() {
     ej.innerHTML = `<p>El primer número vale: ${x}</p><p>El segundo número vale: ${y}</p>`;
 }
 let borrarEj8 = document.querySelector("#borrar-ej8");
-borrarEj8.onclick = function borarEjercicio() {
+borrarEj8.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej8");
     ej.innerHTML = ``;
 }
@@ -152,7 +152,7 @@ realizarEj9.onclick = function realizarEjercicio() {
     }
 }
 let borrarEj9 = document.querySelector("#borrar-ej9");
-borrarEj9.onclick = function borarEjercicio() {
+borrarEj9.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej9");
     ej.innerHTML = ``;
 }
@@ -174,7 +174,7 @@ realizarEj10.onclick = function realizarEjercicio() {
     }
 }
 let borrarEj10 = document.querySelector("#borrar-ej10");
-borrarEj10.onclick = function borarEjercicio() {
+borrarEj10.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej10");
     ej.innerHTML = ``;
 }
@@ -192,7 +192,7 @@ realizarEj11.onclick = function realizarEjercicio() {
     }
 }
 let borrarEj11 = document.querySelector("#borrar-ej11");
-borrarEj11.onclick = function borarEjercicio() {
+borrarEj11.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej11");
     ej.innerHTML = ``;
 }
@@ -212,7 +212,7 @@ realizarEj12.onclick = function realizarEjercicio() {
     }
 }
 let borrarEj12 = document.querySelector("#borrar-ej12");
-borrarEj12.onclick = function borarEjercicio() {
+borrarEj12.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej12");
     ej.innerHTML = ``;
 }
