@@ -14,12 +14,22 @@ borrarEj1.onclick = function borarEjercicio() {
     let ej = document.querySelector("#ej1");
     ej.innerHTML = ``
 }
-/*
-    //2. Lee por pantalla una edad y almacénalo en una variable. Imprime la variable por pantalla.
-    console.log("Ejercicio 2: ");
-    let edad = prompt("Introduzca su edad: ");
-    console.log("Su edad es: " + edad);
 
+//2. Lee por pantalla una edad y almacénalo en una variable. Imprime la variable por pantalla.
+let realizarEj2 = document.querySelector("#realizar-ej2");
+let edad;
+realizarEj2.onclick = function realizarEjercicio() {
+    alert("2. Lee por pantalla una edad y almacénalo en una variable. Imprime la variable por pantalla.");
+    nombre = prompt("Escriba su edad:");
+    let ej = document.querySelector("#ej2");
+    ej.innerHTML = `<p>Su edad es:</p>` + `<p>${nombre} años</p>`;
+}
+let borrarEj2 = document.querySelector("#borrar-ej2");
+borrarEj2.onclick = function borarEjercicio() {
+    let ej = document.querySelector("#ej2");
+    ej.innerHTML = ``
+}
+/*
     //3. ¿Pueden modificarse los ejercicios anteriores para ahorrarse la variable?
     console.log("Ejercicio 3: (no)");
     //No
