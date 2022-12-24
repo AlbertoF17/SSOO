@@ -26,6 +26,14 @@ header h1 {
     font-size: 4rem;
 }
 
+main h1 {
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    text-decoration: underline;
+}
+
 .hueco-header{
     height: 15vh;
 }
