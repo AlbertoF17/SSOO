@@ -103,6 +103,13 @@ header h1 {
     justify-content: space-around;
 }
 
+.botones button:hover{
+    background-color: black;
+    border-radius: 5rem;
+    transition: border-radius 0.7s; 
+    transition: background-color 0.3s;
+}
+
 .ejercicio button {
     cursor: pointer;
     padding: 1rem 2rem;
