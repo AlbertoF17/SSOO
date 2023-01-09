@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="estilos/estilos.css">
-    <script src="script/script.js"></script>
+    <script src="script/script.js" defer></script>
     <title>Calculadora</title>
 </head>
 
@@ -17,34 +17,34 @@
                 <p id="ans"></p>
             </fieldset>
             <fieldset>
-                <button id="(">(</button>
-                <button id=")">)</button>
-                <button id="C">C</button>
-                <button id="^">^</button>
+                <input type="button" value="(" id="parentesis-abierto">
+                <input type="button" value=")" id=")">
+                <input type="button" value="C" id="" onclick="document.querySelector(`#ans`).innerHTML=``">
+                <input type="button" value="^" id="" onclick="document.querySelector(`#ans`).innerHTML=``">
             </fieldset>
             <fieldset>
-                <button id="7" onclick="ans.innerHTML+=`7`">7</button>
-                <button id="8" onclick="ans.innerHTML+=`8`">8</button>
-                <button id="9" onclick="ans.innerHTML+=`9`">9</button>
-                <button id="*">*</button>
+                <input type="button" value="7" id="7" onclick="document.querySelector(`#ans`).innerHTML+=`7`">
+                <input type="button" value="8" id="8" onclick="document.querySelector(`#ans`).innerHTML+=`8`">
+                <input type="button" value="9" id="9" onclick="document.querySelector(`#ans`).innerHTML+=`9`">
+                <input type="button" value="*" id="*" onclick="document.querySelector(`#ans`).innerHTML+=`*`">
             </fieldset>
             <fieldset>
-                <button id="4">4</button>
-                <button id="5">5</button>
-                <button id="6">6</button>
-                <button id="-">-</button>
+                <input type="button" value="4" id="4" onclick="document.querySelector(`#ans`).innerHTML+=`4`">
+                <input type="button" value="5" id="5" onclick="document.querySelector(`#ans`).innerHTML+=`5`">
+                <input type="button" value="6" id="6" onclick="document.querySelector(`#ans`).innerHTML+=`6`">
+                <input type="button" value="-" id="-" onclick="document.querySelector(`#ans`).innerHTML+=`-`">
             </fieldset>
             <fieldset>
-                <button id="1">1</button>
-                <button id="2">2</button>
-                <button id="3">3</button>
-                <button id="+">+</button>
+                <input type="button" value="1" id="1" onclick="document.querySelector(`#ans`).innerHTML+=`1`">
+                <input type="button" value="2" id="2" onclick="document.querySelector(`#ans`).innerHTML+=`2`">
+                <input type="button" value="3" id="3" onclick="document.querySelector(`#ans`).innerHTML+=`3`">
+                <input type="button" value="+" id="+" onclick="document.querySelector(`#ans`).innerHTML+=`+`">
             </fieldset>
             <fieldset>
-                <button id="%">%</button>
-                <button id="0">0</button>
-                <button id=".">.</button>
-                <button id="=">=</button>
+                <input type="button" value="%" id="%" onclick="document.querySelector(`#ans`).innerHTML+=`%`">
+                <input type="button" value="0" id="0" onclick="document.querySelector(`#ans`).innerHTML+=`0`">
+                <input type="button" value="." id="." onclick="document.querySelector(`#ans`).innerHTML+=`.`">
+                <input type="button" value="=" id="=" onclick="document.querySelector(`#ans`).innerHTML+=`${ans}`">
             </fieldset>
         </form>
     </main>

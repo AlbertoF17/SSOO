@@ -1,7 +1,6 @@
-let display = document.querySelector("#display");
+let parentesisAbierto = document.querySelector("#parentesis-abierto");
 
-let abreParentesis = document.querySelector("#(");
-abreParentesis = display.innerHTML+=`(`;
-
-let numeroNueve = document.querySelector("#9");
-numeroNueve.onclick = display.innerHTML+=`9`;
+parentesisAbierto.onclick = function abreParentesis(){
+    let display = document.querySelector("#ans");
+    display.innerHTML += '(';
+};

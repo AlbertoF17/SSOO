@@ -5,19 +5,15 @@
 body{
     margin: 0;
     padding: 0;
+}
+
+main{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
-}
-
-main{
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
     border-radius: 1rem;
 }
 
@@ -32,6 +28,7 @@ main{
     align-items: center;
     justify-content: space-around;
     padding-bottom: 2rem;
+    border-radius: 3rem;
 }
 
 #ans{
@@ -53,7 +50,7 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(34, 34, 34);
+    background-color: black;
 }
 
 fieldset:not(fieldset:nth-child(1)) {
@@ -71,16 +68,17 @@ fieldset:nth-child(1){
     height: 23vh;
 }
 
-button {
-    width: 4rem;
-    height: 4rem;
-    font-size: 2rem;
-    background-color: black;
+input {
+    width: 4.5rem;
+    height: 4.5rem;
+    font-size: 2.5rem;
+    background-color: rgb(34, 34, 34);
     border: 1px solid grey;
     color:white;
+    border-radius: 1rem 1.25rem;
 }
 
-button:hover{
+input:hover{
     cursor:pointer;
     color:black;;
     background-color: white;
