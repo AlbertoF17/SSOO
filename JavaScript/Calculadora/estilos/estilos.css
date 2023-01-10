@@ -54,6 +54,10 @@ main{
     margin: 0rem;
 }
 
+/* #ans:nth-child(odd):not(1){
+    color:gray;
+} ¿SE PUEDE HACER?*/ 
+
 form{
     border: 1px solid black;
     display: flex;
