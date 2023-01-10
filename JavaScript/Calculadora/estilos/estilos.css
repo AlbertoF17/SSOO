@@ -50,6 +50,10 @@ main{
     margin: 0.3rem;
 }
 
+#ans p:nth-child(1) {
+    margin: 0rem;
+}
+
 form{
     border: 1px solid black;
     display: flex;

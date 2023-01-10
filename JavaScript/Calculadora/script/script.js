@@ -98,7 +98,9 @@ puntoDecimal.onclick = function muestraBoton(){
     display.innerHTML = `${operacion}`;
 }
 opIgual.onclick = function solucion(){
-    display.innerHTML += `<p>${operacion}</p>`;
-    display.innerHTML = `<p>${(eval(operacion))}</p>`;
+    let resultado = eval(operacion);
+    display.innerHTML = `${operacion}<p></p>`;
+    display.innerHTML += `${resultado}`;
+    operacion = resultado;
     
 }
