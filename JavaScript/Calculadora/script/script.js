@@ -19,64 +19,86 @@ let opResto = document.querySelector("#resto");
 let num0 = document.querySelector("#cero");
 let puntoDecimal = document.querySelector("#punto");
 let opIgual = document.querySelector("#igual");
+let operacion = "";
 
 parentesisAbierto.onclick = function muestraBoton(){
-    display.innerHTML += `(`;
+    operacion += "(";
+    display.innerHTML = `${operacion}`;
 }
 parentesisCerrado.onclick = function muestraBoton(){
-    display.innerHTML += ')';
+    operacion += ")";
+    display.innerHTML = `${operacion}`;
 }
 letraC.onclick = function muestraBoton(){
-    display.innerHTML = '';
+    operacion = operacion.slice(0, -1);
+    display.innerHTML = `${operacion}`;
 }
 logoCasa.onclick = function muestraBoton(){
-    display.innerHTML = '';
+    operacion = "";
+    display.innerHTML = `${operacion}`;
 }
 num7.onclick = function muestraBoton(){
-    display.innerHTML += '7';
+    operacion += "7";
+    display.innerHTML = `${operacion}`;
 }
 num8.onclick = function muestraBoton(){
-    display.innerHTML += '8';
+    operacion += "8";
+    display.innerHTML = `${operacion}`;
 }
 num9.onclick = function muestraBoton(){
-    display.innerHTML += '9';
+    operacion += "9";
+    display.innerHTML = `${operacion}`;
 }
 opMult.onclick = function muestraBoton(){
-    display.innerHTML += '*';
+    operacion += "*";
+    display.innerHTML = `${operacion}`;
 }
 num4.onclick = function muestraBoton(){
-    display.innerHTML += '4';
+    operacion += "4";;
+    display.innerHTML = `${operacion}`;
 }
 num5.onclick = function muestraBoton(){
-    display.innerHTML += '5';
+    operacion += "5";
+    display.innerHTML = `${operacion}`;
 }
 num6.onclick = function muestraBoton(){
-    display.innerHTML += '6';
+    operacion += "6";
+    display.innerHTML = `${operacion}`;
 }
 opResta.onclick = function muestraBoton(){
-    display.innerHTML += '-';
+    operacion += "-";
+    display.innerHTML = `${operacion}`;
 }
 num1.onclick = function muestraBoton(){
-    display.innerHTML += '1';
+    operacion += "1";
+    display.innerHTML = `${operacion}`;
 }
 num2.onclick = function muestraBoton(){
-    display.innerHTML += '2';
+    operacion += "2";
+    display.innerHTML = `${operacion}`;
 }
 num3.onclick = function muestraBoton(){
-    display.innerHTML += '3';
+    operacion += "3";
+    display.innerHTML = `${operacion}`;
 }
 opSuma.onclick = function muestraBoton(){
-    display.innerHTML += '+';
+    operacion += "+";
+    display.innerHTML = `${operacion}`;
 }
 opResto.onclick = function muestraBoton(){
-    display.innerHTML += '%';
+    operacion += "%";
+    display.innerHTML = `${operacion}`;
 }
 num0.onclick = function muestraBoton(){
-    display.innerHTML += '0';
+    operacion += "0";
+    display.innerHTML = `${operacion}`;
 }
 puntoDecimal.onclick = function muestraBoton(){
-    display.innerHTML += '.';
+    operacion += ".";
+    display.innerHTML = `${operacion}`;
 }
-opIgual.onclick = function muestraBoton(){
-    display.innerHTML += '=';
+opIgual.onclick = function solucion(){
+    display.innerHTML += `<p>${operacion}</p>`;
+    display.innerHTML = `<p>${(eval(operacion))}</p>`;
+    
 }
