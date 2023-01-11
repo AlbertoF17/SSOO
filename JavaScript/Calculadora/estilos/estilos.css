@@ -34,12 +34,12 @@ main{
 #ans{
     height: 10vw;
     width: 20vw;
-    overflow: hidden;
     color: white;
     border: 1px solid white;
     background-color: rgb(34, 34, 34);
     font-size: 3.5rem;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;

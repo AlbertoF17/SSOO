@@ -2,7 +2,7 @@ let display = document.querySelector("#ans");
 let parentesisAbierto = document.querySelector("#parentesis-abierto");
 let parentesisCerrado  = document.querySelector("#parentesis-cerrado");
 let letraC = document.querySelector("#C");
-let logoCasa = document.querySelector("#casita");
+let letrasCA = document.querySelector("#ClearAll");
 let num7 = document.querySelector("#siete");
 let num8 = document.querySelector("#ocho");
 let num9 = document.querySelector("#nueve");
@@ -15,11 +15,12 @@ let num1 = document.querySelector("#uno");
 let num2 = document.querySelector("#dos");
 let num3 = document.querySelector("#tres");
 let opSuma = document.querySelector("#suma");
-let opResto = document.querySelector("#resto");
+let opDivision = document.querySelector("#division");
 let num0 = document.querySelector("#cero");
 let puntoDecimal = document.querySelector("#punto");
 let opIgual = document.querySelector("#igual");
 let operacion = "";
+let solucionado = false;
 
 parentesisAbierto.onclick = function muestraBoton(){
     operacion += "(";
@@ -30,10 +31,14 @@ parentesisCerrado.onclick = function muestraBoton(){
     display.innerHTML = `<p></p><p>${operacion}</p>`;
 }
 letraC.onclick = function muestraBoton(){
-    operacion = operacion.slice(0, -1);
+    if (solucionado){
+        operacion = "";
+    } else{
+        operacion = operacion.slice(0, -1);
+    }
     display.innerHTML = `<p></p><p>${operacion}</p>`;
 }
-logoCasa.onclick = function muestraBoton(){
+letrasCA.onclick = function muestraBoton(){
     operacion = "";
     display.innerHTML = `<p></p><p>${operacion}</p>`;
 }
@@ -85,8 +90,8 @@ opSuma.onclick = function muestraBoton(){
     operacion += "+";
     display.innerHTML = `<p></p><p>${operacion}</p>`;
 }
-opResto.onclick = function muestraBoton(){
-    operacion += "%";
+opDivision.onclick = function muestraBoton(){
+    operacion += "/";
     display.innerHTML = `<p></p><p>${operacion}</p>`;
 }
 num0.onclick = function muestraBoton(){
@@ -98,8 +103,9 @@ puntoDecimal.onclick = function muestraBoton(){
     display.innerHTML = `<p></p><p>${operacion}</p>`;
 }
 opIgual.onclick = function solucion(){
+    solucionado = true;
     let resultado = eval(operacion);
     display.innerHTML = `<p>${operacion}</p>`;
-    display.innerHTML += `<p>${resultado}</p>`;
     operacion = resultado;
+    display.innerHTML += `<p>${operacion}</p>`;
 }
