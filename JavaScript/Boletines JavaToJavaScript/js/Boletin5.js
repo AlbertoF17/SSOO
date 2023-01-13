@@ -150,7 +150,7 @@ borrarEj7.onclick = function borrarEjercicio() {
 
 let realizarEj8 = document.querySelector("#realizar-ej8");
 realizarEj8.onclick = function realizarEjercicio() {
-    alert("7. Lea por pantalla un número y compruebe si es positivo y además impar.");
+    alert("8. Lea por pantalla un numero entero y compruebe si es el 3, el 7 o el 9.");
     let numero = Number.parseInt(prompt("Escriba un número entero:"));
     let numeros = numero==3 || numero==7 || numero==9;
     let ej = document.querySelector("#ej8");

@@ -1,39 +1,68 @@
 // BOLETIN 6
 
-/*
-//1. Crea un algoritmo que imprima por pantalla la tabla de la verdad (truth table) de la operación
-//lógica NOT. Para ello, utiliza las siguientes instrucciones (cuidado con las comillas, puede que
-//se copien mal):
-System.out.println("Tabla de la operacion lógica NOT");
-System.out.println("******************************************");
-System.out.println("      * A           |           !A *       ");
-System.out.println("**Valor de entrada******Valor de salida**");
-System.out.println("      " + true +"          |         " + !true + "         ");
-System.out.println("      " + false + "         |         " + !false + "         ");
-System.out.println("******************************************");
-//Si fuese necesario, modifique la cantidad de espacios en blanco o caracteres para que la tabla se
-//vea de la mejor forma posible.
-//2. Repita el ejercicio anterior para la operación lógica AND.
-System.out.println("Tabla de la operacion lógica AND");
-System.out.println("******************************************");
-System.out.println("      * A            &&          B *       ");
-System.out.println("**Valor de entrada******Valor de salida**");
-System.out.println("  false && false      |       " + (false&&false) + "  ");
-System.out.println("  false && true       |       " + (false&&true) + "  ");
-System.out.println("  true && false       |       " + (true&&false) + "  ");
-System.out.println("  true && true        |       " + (true&&true) + "  ");
-System.out.println("******************************************");
+let realizarEj1 = document.querySelector("#realizar-ej1");
+realizarEj1.onclick = function realizarEjercicio() {
+        alert("1. Crea un algoritmo que imprima por pantalla la tabla de la verdad (truth table) de la operación lógica NOT.");
+        let ej = document.querySelector("#ej1");
+        ej.innerHTML = `<p>Tabla de la operacion lógica NOT</p><p>*****A*****|*****!A*****</p>
+    <p>***Entrada**|***Salida***</p><p>*** ${true} ****|*** ${!true} ***</p><p>*** ${false} ****|*** ${!false} ***</p>`;
+}
+let borrarEj1 = document.querySelector("#borrar-ej1");
+borrarEj1.onclick = function borrarEjercicio() {
+        let ej = document.querySelector("#ej1");
+        ej.innerHTML = ``;
+}
 
-//3. Repita el ejercicio anterior para la operación lógica OR.
-System.out.println("Tabla de la operacion lógica OR");
-System.out.println("******************************************");
-System.out.println("      * A            ||          B *       ");
-System.out.println("**Valor de entrada******Valor de salida**");
-System.out.println(" false || false      |       " + (false||false) + "  ");
-System.out.println(" false || true       |       " + (false||true) + "  ");
-System.out.println("  true || false      |       " + (true||false) + "  ");
-System.out.println("  true || true       |       " + (true||true) + "  ");
-System.out.println("******************************************");
+let realizarEj2 = document.querySelector("#realizar-ej2");
+realizarEj2.onclick = function realizarEjercicio() {
+        alert("2. Repita el ejercicio anterior para la operación lógica AND.");
+        let ej = document.querySelector("#ej2");
+        ej.innerHTML = `<p>Tabla de la operacion lógica AND</p><p>*****A****&&*****B*****</p>
+    <p>***Entrada**|***Salida***</p><p>${false}&&${false} *|*** ${false && false} ***</p><p>${false}&&${true} *|*** ${false && true} ***</p>
+    <p>${true}&&${false} *|*** ${true && false} ***</p><p>${true}&&${true} *|*** ${true && true} ***</p>`;
+}
+let borrarEj2 = document.querySelector("#borrar-ej2");
+borrarEj2.onclick = function borrarEjercicio() {
+        let ej = document.querySelector("#ej2");
+        ej.innerHTML = ``;
+}
+
+let realizarEj3 = document.querySelector("#realizar-ej3");
+realizarEj3.onclick = function realizarEjercicio() {
+        alert("3. Repita el ejercicio anterior para la operación lógica OR.");
+        let ej = document.querySelector("#ej3");
+        ej.innerHTML = `<p>Tabla de la operacion lógica OR</p><p>*****A****||*****B*****</p>
+    <p>***Entrada**|***Salida***</p><p>*${false}||${false} *|*** ${false || false} ***</p><p>*${false}||${true} *|*** ${false || true} ***</p>
+    <p>*${true}||${false} *|*** ${true || false} ***</p><p>**${true}||${true} *|*** ${true || true} ***</p>`;
+}
+let borrarEj3 = document.querySelector("#borrar-ej3");
+borrarEj3.onclick = function borrarEjercicio() {
+        let ej = document.querySelector("#ej3");
+        ej.innerHTML = ``;
+}
+
+let realizarEj4 = document.querySelector("#realizar-ej4");
+realizarEj4.onclick = function realizarEjercicio() {
+        alert("4. Evalúe mentalmente las siguientes operaciones Booleanas y compruebe posteriormente en Java su resultado, almacenándolas en una variable booleana e imprimiéndolas por pantalla.");
+        let ej = document.querySelector("#ej4");
+        ej.innerHTML = `<p>a) NO CIERTO Y NO VERDADERO</p><p>!true && true = ${!true&&true}</p>
+        <p>b) NO FALSO Y NO VERDADERO</p><p>!false && true = ${!false&&true}</p>
+        <p>c) VERDADERO Y NO VERDADERO O NO FALSO</p><p>true && !true || !false = ${true&&!true||!false}</p>
+        <p>d) VERDADERO Y (NO VERDADERO O NO FALSO)</p><p>true && (!true || !false) = ${true&&(!true||!false)}</p>
+        #HACER A PARTIR DE AQUI
+        <p>a) NO CIERTO Y NO VERDADERO</p><p>!true && true = ${!true&&true}</p>
+        <p>a) NO CIERTO Y NO VERDADERO</p><p>!true && true = ${!true&&true}</p>
+        <p>a) NO CIERTO Y NO VERDADERO</p><p>!true && true = ${!true&&true}</p>
+        <p>a) NO CIERTO Y NO VERDADERO</p><p>!true && true = ${!true&&true}</p>
+        <p>a) NO CIERTO Y NO VERDADERO</p><p>!true && true = ${!true&&true}</p>
+        <p>a) NO CIERTO Y NO VERDADERO</p><p>!true && true = ${!true&&true}</p>`;
+}
+let borrarEj4 = document.querySelector("#borrar-ej4");
+borrarEj4.onclick = function borrarEjercicio() {
+        let ej = document.querySelector("#ej4");
+        ej.innerHTML = ``;
+}
+/*
 
 //4. Evalúe mentalmente las siguientes operaciones Booleanas y compruebe posteriormente en
 //Java su resultado, almacenándolas en una variable booleana e imprimiéndolas por pantalla.
