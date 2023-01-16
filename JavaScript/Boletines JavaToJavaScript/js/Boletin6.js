@@ -61,49 +61,7 @@ borrarEj4.onclick = function borrarEjercicio() {
         let ej = document.querySelector("#ej4");
         ej.innerHTML = ``;
 }
-/*
 
-//4. Evalúe mentalmente las siguientes operaciones Booleanas y compruebe posteriormente en
-//Java su resultado, almacenándolas en una variable booleana e imprimiéndolas por pantalla.
-//a. NO CIERTO Y NO VERDADERO
-boolean op1 = !true && !true;
-System.out.println("Operación 1 (!true && !true): " + op1);
-
-//b. NO FALSO Y NO VERDADERO
-boolean op2 = !false && !true;
-System.out.println("Operación 2 (!false && !true): " + op2);
-
-//c. VERDADERO Y NO VERDADERO O NO FALSO
-boolean op3 = true && !true || !false;
-System.out.println("Operación 3 (true && !true || !false): " + op3);
-
-//d. VERDADERO Y (NO VERDADERO O NO FALSO)
-boolean op4 = true && (!true && !false);
-System.out.println("Operación 4 (true && (!true && !false)): " + op4);
-
-//e. VERDADERO Y (NO VERDADERO O FALSO)
-boolean op5 = true && (!true || false);
-System.out.println("Operación 5 (true && (!true || false)): " + op1);
-
-//f. FALSO O FALSO O NO FALSO
-boolean op6 = false || false && !false;
-System.out.println("Operación 6 (false || false && !false): " + op6);
-
-//g. NO (FALSO O FALSO O NO FALSO)
-boolean op7 = !(false || false && !false);
-System.out.println("Operación 7 (!(false || false && !false)): " + op7);
-
-//h. NO(FALSO Y FALSO)Y(NO FALSO Y NO FALSO) Y NO NO VERDADERO
-boolean op8 = !(false && false) && (!false && !false) & !!true;
-System.out.println("Operación 8 (!(false && false) && (!false && !false) & !!true): " + op8);
-
-//i. NO NO NO NO NO NO NO NO FALSO
-boolean op9 = !!!!!!!!false;
-System.out.println("Operación 9 (!!!!!!!!false): " + op9);
-
-//j. FALSO O NO NO FALSO O VERDADERO Y FALSO
-boolean op10 = false || !!false || true && false;
-System.out.println("Operación 10 (false || !!false || true && false): " + op10);
 /*
 //5. En base a los resultados anteriores, ¿cuál es la precedencia de los operadores lógicos? Si aún
 //no está clara, ponga un ejemplo que no utilice paréntesis para saber cuál de las tres operaciones
