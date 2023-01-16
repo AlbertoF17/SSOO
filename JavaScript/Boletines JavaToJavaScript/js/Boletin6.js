@@ -49,13 +49,12 @@ realizarEj4.onclick = function realizarEjercicio() {
         <p>b) NO FALSO Y NO VERDADERO</p><p>!false && true = ${!false&&true}</p>
         <p>c) VERDADERO Y NO VERDADERO O NO FALSO</p><p>true && !true || !false = ${true&&!true||!false}</p>
         <p>d) VERDADERO Y (NO VERDADERO O NO FALSO)</p><p>true && (!true || !false) = ${true&&(!true||!false)}</p>
-        #HACER A PARTIR DE AQUI
-        <p>a) NO CIERTO Y NO VERDADERO</p><p>!true && true = ${!true&&true}</p>
-        <p>a) NO CIERTO Y NO VERDADERO</p><p>!true && true = ${!true&&true}</p>
-        <p>a) NO CIERTO Y NO VERDADERO</p><p>!true && true = ${!true&&true}</p>
-        <p>a) NO CIERTO Y NO VERDADERO</p><p>!true && true = ${!true&&true}</p>
-        <p>a) NO CIERTO Y NO VERDADERO</p><p>!true && true = ${!true&&true}</p>
-        <p>a) NO CIERTO Y NO VERDADERO</p><p>!true && true = ${!true&&true}</p>`;
+        <p>e. VERDADERO Y (NO VERDADERO O FALSO)</p><p>true && (!true || false) = ${true&&(!true||false)}</p>
+        <p>f. FALSO O FALSO O NO FALSO</p><p>false || false || !false = ${false||false||!false}</p>
+        <p>g. NO (FALSO O FALSO O NO FALSO)</p><p>!(false || false || !false) = ${!(false||false||!false)}</p>
+        <p>h. NO(FALSO Y FALSO)Y(NO FALSO Y NO FALSO) Y NO NO VERDADERO</p><p>!(false && false) && (!fasle && !false) && !!true = ${!(false&&false)&&(!fasle&&!false)&&!!true}</p>
+        <p>i. NO NO NO NO NO NO NO NO FALSO</p><p>!!!!!!!!false = ${!!!!!!!!false}</p>
+        <p>j. FALSO O NO NO FALSO O VERDADERO Y FALSO</p><p>false || !!false || true && false = ${false||!!false||true && false}</p>`;
 }
 let borrarEj4 = document.querySelector("#borrar-ej4");
 borrarEj4.onclick = function borrarEjercicio() {
