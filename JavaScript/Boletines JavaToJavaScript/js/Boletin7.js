@@ -1,6 +1,5 @@
 // BOLETIN 7
 
-
 let realizarEj1 = document.querySelector("#realizar-ej1");
 realizarEj1.onclick = function realizarEjercicio() {
     alert("1. Leer dos números enteros e imprimir el mayor de ellos.");
@@ -8,11 +7,11 @@ realizarEj1.onclick = function realizarEjercicio() {
     let b = Number.parseInt(prompt("Valor del segundo entero:")); 
     let ej = document.querySelector("#ej1");
     if (a>b) {
-        ej.innerHTML = `El mayor es el primer número: ${a}`;
+        ej.innerHTML = `<p>El mayor es el primer número: ${a}</p>`;
     } else if (a<b) {
-        ej.innerHTML = `El mayor es el segundo número: ${b}`;
+        ej.innerHTML = `<p>El mayor es el segundo número: ${b}</p>`;
     } else {
-        ej.innerHTML = `Son iguales: ${a}`;
+        ej.innerHTML = `<p>Son iguales: ${a}</p>`;
     }
 }
 let borrarEj1 = document.querySelector("#borrar-ej1");
@@ -21,16 +20,15 @@ borrarEj1.onclick = function borrarEjercicio() {
     ej.innerHTML = ``;
 }
 
-
 let realizarEj2 = document.querySelector("#realizar-ej2");
 realizarEj2.onclick = function realizarEjercicio() {
     alert("2. Leer un entero y comprobar si es negativo o positivo, imprimiendo por pantalla una frase al respecto. Considere el cero como positivo.");
     let num = Number.parseInt(prompt("Introduzca un numero entero:")); 
     let ej = document.querySelector("#ej2");
     if (num>=0) {
-        ej.innerHTML = `El número ${num} es un número positivo`;
+        ej.innerHTML = `<p>El número ${num} es un número positivo</p>`;
     } else {
-        ej.innerHTML = `El número ${num} es un número negativo`;
+        ej.innerHTML = `<p>El número ${num} es un número negativo</p>`;
     }
 }
 let borrarEj2 = document.querySelector("#borrar-ej2");
@@ -39,18 +37,17 @@ borrarEj2.onclick = function borrarEjercicio() {
     ej.innerHTML = ``;
 }
 
-
 let realizarEj3 = document.querySelector("#realizar-ej3");
 realizarEj3.onclick = function realizarEjercicio() {
     alert("3. Modifique el ejercicio anterior para que, en caso de introducir un cero, se imprima por pantalla un mensaje específico.");
     let num = Number.parseInt(prompt("Introduzca un numero entero:")); 
     let ej = document.querySelector("#ej3");
     if (num>0) {
-        ej.innerHTML = `El número ${num} es un número positivo`;
+        ej.innerHTML = `<p>El número ${num} es un número positivo</p>`;
     } else if (num==0){
-        ej.innerHTML = `El número ${num} es cero`;
+        ej.innerHTML = `<p>El número ${num} es cero</p>`;
     } else {
-        ej.innerHTML = `El número ${num} es un número negativo`;
+        ej.innerHTML = `<p>El número ${num} es un número negativo</p>`;
     }
 }
 let borrarEj3 = document.querySelector("#borrar-ej3");
@@ -59,16 +56,15 @@ borrarEj3.onclick = function borrarEjercicio() {
     ej.innerHTML = ``;
 }
 
-
 let realizarEj4 = document.querySelector("#realizar-ej4");
 realizarEj4.onclick = function realizarEjercicio() {
     alert("4. Leer una edad y comprobar si la persona es mayor de edad, imprimiendo una frase al respecto. Si es menor, imprimir también un mensaje.");
     let edad = Number.parseInt(prompt("Introduzca su edad:")); 
     let ej = document.querySelector("#ej4");
     if (edad>=18) {
-        ej.innerHTML = `Es mayor de edad`;
+        ej.innerHTML = `<p>Es mayor de edad</p>`;
     } else {
-        ej.innerHTML = `Es menor de edad`;
+        ej.innerHTML = `<p>Es menor de edad</p>`;
     }
     
 }
@@ -78,18 +74,17 @@ borrarEj4.onclick = function borrarEjercicio() {
     ej.innerHTML = ``;
 }
 
-
 let realizarEj5 = document.querySelector("#realizar-ej5");
 realizarEj5.onclick = function realizarEjercicio() {
     alert("5. Modificar el ejercicio anterior para que además se compruebe si es jubilado (tiene más de 67 años), imprimiendo un mensaje al respecto.");
     let edad = Number.parseInt(prompt("Introduzca su edad:")); 
     let ej = document.querySelector("#ej5");
     if (edad>=67) {
-        ej.innerHTML = `Es jubilado`;
+        ej.innerHTML = `<p>Es jubilado</p>`;
     } else if (edad>=18) {
-        ej.innerHTML = `Es mayor de edad`;
+        ej.innerHTML = `<p>Es mayor de edad</p>`;
     } else {
-        ej.innerHTML = `Es menor de edad`;
+        ej.innerHTML = `<p>Es menor de edad</p>`;
     }
     
 }
@@ -99,7 +94,6 @@ borrarEj5.onclick = function borrarEjercicio() {
     ej.innerHTML = ``;
 }
 
-
 let realizarEj6 = document.querySelector("#realizar-ej6");
 realizarEj6.onclick = function realizarEjercicio() {
     alert("6. Modificar el ejercicio anterior para que solo se permita una edad válida (0 a 120). En caso de ser válida hará todo lo implementado anteriormente. En caso de ser inválida, se imprimirá un mensaje de error y el programa acabará.");
@@ -107,14 +101,14 @@ realizarEj6.onclick = function realizarEjercicio() {
     let ej = document.querySelector("#ej6");
     if (edad>=0 && edad<=120) {
         if (edad>=67) {
-            ej.innerHTML = `Es jubilado`;
+            ej.innerHTML = `<p>Es jubilado</p>`;
         } else if (edad>=18) {
-            ej.innerHTML = `Es mayor de edad`;
+            ej.innerHTML = `<p>Es mayor de edad</p>`;
         } else {
-            ej.innerHTML = `Es menor de edad`;
+            ej.innerHTML = `<p>Es menor de edad</p>`;
         }
     } else {
-        ej.innerHTML = `Error: edad no válida`;
+        ej.innerHTML = `<p>Error: edad no válida</p>`;
     }    
 }
 let borrarEj6 = document.querySelector("#borrar-ej6");
@@ -122,7 +116,6 @@ borrarEj6.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej6");
     ej.innerHTML = ``;
 }
-
 
 let realizarEj7 = document.querySelector("#realizar-ej7");
 realizarEj7.onclick = function realizarEjercicio() {
@@ -136,9 +129,9 @@ realizarEj7.onclick = function realizarEjercicio() {
     let boolPrimitiva = (num1==1 && num2==3 && num3==10 && num4==20 && num5==33 && num6==40);
     let ej = document.querySelector("#ej7");
     if (boolPrimitiva) {
-        ej.innerHTML =  `GANASTE LA PRIMITIVA`;
+        ej.innerHTML =  `<p>GANASTE LA PRIMITIVA</p>`;
     } else {
-        ej.innerHTML = `Inténtalo otro día`;
+        ej.innerHTML = `<p>Inténtalo otro día</p>`;
     }    
 }
 let borrarEj7 = document.querySelector("#borrar-ej7");
@@ -146,7 +139,6 @@ borrarEj7.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej7");
     ej.innerHTML = ``;
 }
-
 
 let realizarEj8 = document.querySelector("#realizar-ej8");
 realizarEj8.onclick = function realizarEjercicio() {
@@ -161,13 +153,13 @@ realizarEj8.onclick = function realizarEjercicio() {
     let ej = document.querySelector("#ej8");
     if (num1>=1 && num1<=49 && num2>=1 && num2<=49 && num3>=1 && num3<=49 && num4>=1 && num4<=49 && num5>=1 && num5<=49  && num6>=1 && num6<=49) {
         if (boolPrimitiva) {
-            ej.innerHTML =  `GANASTE LA PRIMITIVA`;
+            ej.innerHTML =  `<p>GANASTE LA PRIMITIVA</p>`;
         } else {
-            ej.innerHTML = `Inténtalo otro día`;
+            ej.innerHTML = `<p>Inténtalo otro día</p>`;
         }
     
     } else {
-        ej.innerHTML = `Error: número fuera del rango admitido`;
+        ej.innerHTML = `<p>Error: número fuera del rango admitido</p>`;
     } 
 }
 let borrarEj8 = document.querySelector("#borrar-ej8");
@@ -176,17 +168,15 @@ borrarEj8.onclick = function borrarEjercicio() {
     ej.innerHTML = ``;
 }
 
-
 let realizarEj9 = document.querySelector("#realizar-ej9");
 realizarEj9.onclick = function realizarEjercicio() {
     alert("9. Leer por pantalla un entero y comprobar si es par o impar (use el operador módulo %).");
     let parImpar = Number.parseInt(prompt("Introduzca un número:"));
-    let boolPrimitiva = (num1==1 && num2==3 && num3==10 && num4==20 && num5==33 && num6==40);
     let ej = document.querySelector("#ej9");
     if (parImpar%2==0) {
-        ej.innerHTML = `El número es par`;
+        ej.innerHTML = `<p>El número es par</p>`;
     } else {
-        ej.innerHTML = `El número es impar`;
+        ej.innerHTML = `<p>El número es impar</p>`;
     }
 }
 let borrarEj9 = document.querySelector("#borrar-ej9");
@@ -195,6 +185,7 @@ borrarEj9.onclick = function borrarEjercicio() {
     ej.innerHTML = ``;
 }
 
+/*CONTINUAR POR AQUI*/
 
 let realizarEj10 = document.querySelector("#realizar-ej10");
 realizarEj10.onclick = function realizarEjercicio() {
