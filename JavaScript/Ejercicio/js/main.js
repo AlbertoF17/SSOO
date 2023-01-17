@@ -22,9 +22,9 @@ cartaEspec.innerHTML = `<p>Esto es el contenido</p>`;
 //1) Su primer hijo
 console.log(contenedorDeCartas.firstElementChild);
 //2) Su tercer hijo
-console.log(contenedorDeCartas.children[3]);
+console.log(contenedorDeCartas.children[2]);
 //3) El siguiente hermano del tercer hijo
-console.log(contenedorDeCartas.children[3].nextElementSibling);
+console.log(contenedorDeCartas.children[2].nextElementSibling);
 //4) Su último hijo
 console.log(contenedorDeCartas.lastElementChild);
 //5) Su padre
