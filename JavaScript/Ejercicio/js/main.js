@@ -35,5 +35,3 @@ console.log(contenedorDeCartas.parentElement.parentElement);
 console.log(contenedorDeCartas.previousElementSibling);
 //8) Las clases del último hijo
 console.log(contenedorDeCartas.lastElementChild.className);
-
-
