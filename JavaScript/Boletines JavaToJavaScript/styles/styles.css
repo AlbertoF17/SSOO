@@ -34,6 +34,78 @@ h1:not(header h1) {
     text-decoration: underline;
 }
 
+.box p{
+    text-transform: uppercase;
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    text-decoration: none;
+    color:white;
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.box p:hover{
+    color: black;
+    transition: all 0.3s;
+}
+
+.box {
+    right: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    background: darkblue;
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+    position: relative;
+    display: table;
+}
+  
+.box span {
+    display: table-cell;
+    vertical-align: middle;
+}
+  
+.box:before, .box:after {
+    content: '';
+    position: absolute;
+}
+  
+.box:before {
+    border-left: 25px solid darkblue;
+    border-right: 25px solid transparent;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    right: 200px;
+    top: 0px;
+    width: 0;
+    height: 0;
+    display: block;
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+  
+.box:after {
+    border-left: 26px solid transparent;
+    border-right: 26px solid rgb(0, 113, 179);
+    border-top: 26px solid transparent;
+    border-bottom: 26px solid transparent;
+    left: 150px;
+    top: -1px;
+    width: 0;
+    height: 0;
+    display: block;
+}
+
 .hueco-header{
     height: 15vh;
 }
