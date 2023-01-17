@@ -1,6 +1,12 @@
 // //pop-up
 // alert("Hola Mundo");
 
+let bloquecito = document.querySelector("#hola");
+let botonMostrar = document.querySelector("#mostrar");
+let botonOcultar = document.querySelector("#ocultar");
+
+botonMostrar.
+
 // //Variables
 // let nombre = "Alberto";
 // var apellido1 = "Fernández"; //NO USAR, JAVASCRIPT ANTIGUO
