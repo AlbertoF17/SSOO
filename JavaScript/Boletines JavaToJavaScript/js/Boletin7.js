@@ -269,7 +269,7 @@ let realizarEj12 = document.querySelector("#realizar-ej12");
 realizarEj12.onclick = function realizarEjercicio() {
     alert("12. Establezca un número entre 0 y 9999, que servirá como contraseña. Puede elegir el que desee. Pida por pantalla un número y si coincide escriba “Contraseña correcta, accediendo al sistema”, en caso contrario escriba “Contraseña incorrecta, cerrando sesión”.");
     let pass = 9412;
-    let intentoPass = Number.parseInt(prompt("Introduzca la contraseña (número entre 0 y 9999):"));
+    let intentoPass = Number.parseInt(prompt("Introduzca la contraseña (número entre 0 y 9999):", 9412));
     let ej = document.querySelector("#ej12");
     if (intentoPass==pass) {
         ej.innerHTML = `Contraseña correcta, accediendo al sistema`;
@@ -333,92 +333,98 @@ borrarEj15.onclick = function borrarEjercicio() {
     ej.innerHTML = ``;
 }
 
-
-
-/*
-//16. Pedir un número entre 0 y 99999 y decir cuántas cifras tiene.
-System.out.println("Ejercicio 16: 0-99999");
-System.out.print("Introduzca un numero entre 0 y 99999: ");
-int numero = sc.nextInt();
-
-if (numero>=0 && numero<10) {
-    System.out.println("Numero de 1 cifra detectado");
-} else if (numero>=10 && numero<100) { //(numero<100)
-    System.out.println("Numero de 2 cifras detectado");
-} else if (numero>=100 && numero<1000) { // (numero<1000)
-    System.out.println("Numero de 3 cifras detectado");
-} else if (numero>=1000 && numero<10000) { // (numero<10000)
-    System.out.println("Numero de 4 cifras detectado");
-} else if (numero>=10000 && numero<100000) { // (numero<100000)
-    System.out.println("Numero de 5 cifras detectado");
-} else {
-    System.out.println("Numero fuera del rango");
-}
-
-int cont = 1;
-if (numero>0 && numero<=99999) {
-    while (numero>=10) {
-        numero = numero / 10;
+let realizarEj16 = document.querySelector("#realizar-ej16");
+realizarEj16.onclick = function realizarEjercicio() {
+    alert("16. Pedir un número entre 0 y 99999 y decir cuántas cifras tiene.");
+    let num = Number.parseInt(prompt("Introduzca un numero entre 0 y 99999: "));
+    let ej = document.querySelector("#ej16");
+    let cont = 1;
+    if (num > 9 && num <= 99999) {
+    while (num>=10) {
+        num = num / 10;
         cont++;
     }
-    System.out.println("Numero de "+ cont +" cifras detectado");
-} else {
-    System.out.println("Numero fuera del rango");
+    ej.innerHTML = `<p>Número de ${cont} cifras detectado</p>`;
+    } else if (num > 0 && num < 10){
+        ej.innerHTML = `<p>Número de ${cont} cifra detectado</p>`;
+    } else {
+        ej.innerHTML = `<p>Número fuera del rango</p>`;
+    }
+}
+let borrarEj16 = document.querySelector("#borrar-ej16");
+borrarEj16.onclick = function borrarEjercicio() {
+    let ej = document.querySelector("#ej16");
+    ej.innerHTML = ``;
 }
 
-//17. La universidad ha categorizado las matrículas de acuerdo a la facultad que va a
-//estudiar el postulante. Ingrese por teclado el nombre de la facultad donde va a
-//estudiar, y muestre el importe y la mensualidad. (Use el control switch-case, y
-//recuerde que el nombre que introduzca debe coincidir exactamente con el nombre de universidad).
-System.out.println("Ejercicio 17: Universidades");
-System.out.print("Introduzca la universidad: ");
-sc.nextLine();
-String uni = sc.nextLine();
-switch (uni) {
-    case "Ing. de Sistemas":
-        System.out.println("Importe: 350 | Mensualidad: 650");
-        break;
-    case "Derecho":
-        System.out.println("Importe: 300 | Mensualidad: 550");
-        break;
-    case "Ing. Naviera":
-        System.out.println("Importe: 300 | Mensualidad: 500");
-        break;
-    case "Ing. Pesquera":
-        System.out.println("Importe: 310 | Mensualidad: 460");
-        break;
-    case "Contabilidad":
-        System.out.println("Importe: 280 | Mensualidad: 490");
-        break;
-    case "Administración":
-        System.out.println("Importe: 360 | Mensualidad: 520");
-        break;
-    default:
-        System.out.println("Esta universidad no consta en nuestra base de datos");
+let realizarEj17 = document.querySelector("#realizar-ej17");
+realizarEj17.onclick = function realizarEjercicio() {
+    alert("17. La universidad ha categorizado las matrículas de acuerdo a la facultad que va a estudiar el postulante. Ingrese por teclado el nombre de la facultad donde va a estudiar, y muestre el importe y la mensualidad.");
+    let uni = prompt("Introduzca la universidad: ");
+    let ej = document.querySelector("#ej17");
+    switch (uni) {
+        case "Ing. de Sistemas":
+            ej.innerHTML = `<p>Importe: 350€</p><p>Mensualidad: 650€</p>`;
+            break;
+        case "Derecho":
+            ej.innerHTML = `<p>Importe: 300€</p><p>Mensualidad: 550€</p>`;
+            break;
+        case "Ing. Naviera":
+            ej.innerHTML = `<p>Importe: 300€</p><p>Mensualidad: 600€</p>`;
+            break;
+        case "Ing. Pesquera":
+            ej.innerHTML = `<p>Importe: 310€</p><p>Mensualidad: 460€</p>`;
+            break;
+        case "Contabilidad":
+            ej.innerHTML = `<p>Importe: 280€</p><p>Mensualidad: 490€</p>`;
+            break;
+        case "Administración":
+            ej.innerHTML = `<p>Importe: 360€</p><p>Mensualidad: 520€</p>`;
+            break;
+        default:
+            ej.innerHTML = `<p>Esta universidad no consta en nuestra base de datos</p>`;
+            break;
+    }
+}
+let borrarEj17 = document.querySelector("#borrar-ej17");
+borrarEj17.onclick = function borrarEjercicio() {
+    let ej = document.querySelector("#ej17");
+    ej.innerHTML = ``;
 }
 
-//18. Escriba programa para ingresar 4 notas de un alumno, calcular y mostrar su
-//promedio, sabiendo que la primera y segunda tiene 20% de peso cada una, la
-//tercera y cuarta tienen 30% de peso cada una.
-System.out.println("Ejercicio 18: Notas");
-System.out.println("Teclee las notas del alumno: ");
-float nota1 = sc.nextFloat();
-float nota2 = sc.nextFloat();
-float nota3 = sc.nextFloat();
-float nota4 = sc.nextFloat();
-System.out.println("Su nota promedio es: " + (nota1*0.2 + nota2*0.2 + nota3*0.3 + nota4*0.3));
+let realizarEj18 = document.querySelector("#realizar-ej18");
+realizarEj18.onclick = function realizarEjercicio() {
+    alert("18. Escriba programa para ingresar 4 notas de un alumno, calcular y mostrar su tercera y cuarta tienen 30% de peso cada una.");
+    let nota1 = Number.parseInt(prompt("Introduzca la primera nota: "));
+    let nota2 = Number.parseInt(prompt("Introduzca la segunda nota: "));
+    let nota3 = Number.parseInt(prompt("Introduzca la tercera nota: "));
+    let nota4 = Number.parseInt(prompt("Introduzca la cuarta nota: "));
+    let ej = document.querySelector("#ej18");
+    ej.innerHTML = `<p>Su nota promedio es: ${nota1*0.2 + nota2*0.2 + nota3*0.3 + nota4*0.3}</p>`;
+}
+let borrarEj18 = document.querySelector("#borrar-ej18");
+borrarEj18.onclick = function borrarEjercicio() {
+    let ej = document.querySelector("#ej18");
+    ej.innerHTML = ``;
+}
 
-//19. Desarrolle un programa que pida cuantos hombres y mujeres hay en un aula y
-//permita calcular el porcentaje de hombres y mujeres.
-System.out.println("Ejercicio 19: %hombres vs %mujeres");
-System.out.print("Indique numero de hombres: ");
-int hombres = sc.nextInt();
-System.out.print("Indique numero de mujeres: ");
-int mujeres = sc.nextInt();
-int total = hombres + mujeres;
-System.out.println("El porcentaje de hombres es del " + (hombres*100f/total) + "%");
-System.out.println("El porcentaje de mujeres es del " + (mujeres*100f/total) + "%");
+let realizarEj19 = document.querySelector("#realizar-ej19");
+realizarEj19.onclick = function realizarEjercicio() {
+    alert("19. Desarrolle un programa que pida cuantos hombres y mujeres hay en un aula y permita calcular el porcentaje de hombres y mujeres.");
+    let numHombres = Number.parseInt(prompt("Introduzca el número de hombres nota: "));
+    let numMujeres = Number.parseInt(prompt("Introduzca el número de mujeres nota: "));
+    let numtotal = numHombres + numMujeres;
+    let ej = document.querySelector("#ej19");
+    ej.innerHTML = `<p>El porcentaje de hombres es del ${numHombres*100/numtotal}%</p>
+    <p>El porcentaje de mujeres es del ${numMujeres*100/numtotal}%</p>`;
+}
+let borrarEj19 = document.querySelector("#borrar-ej19");
+borrarEj19.onclick = function borrarEjercicio() {
+    let ej = document.querySelector("#ej19");
+    ej.innerHTML = ``;
+}
 
+/*
 //20. A partir de aquí, los ejercicios son complicados. No se frustre si no le salen.
 System.out.println("Ejercicio 20: consejo (no ejercicio)");
 //Vale, gracias por el consejo.
