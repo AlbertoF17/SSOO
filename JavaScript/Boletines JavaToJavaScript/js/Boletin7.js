@@ -424,129 +424,144 @@ borrarEj19.onclick = function borrarEjercicio() {
     ej.innerHTML = ``;
 }
 
+let realizarEj20 = document.querySelector("#realizar-ej20");
+realizarEj20.onclick = function realizarEjercicio() {
+    alert("20. Swapping");
+    let swapA = Number.parseInt(prompt("Introduzca el primer número:"));
+    let swapB = Number.parseInt(prompt("Introduzca el segundo número:"));
+    let swapC = Number.parseInt(prompt("Introduzca el tercer número:"));
+    let ej = document.querySelector("#ej20");
+    ej.innerHTML = `<p>Valores originales:</p><p>A = ${swapA} | B = ${swapB}</p>`;
+    swapC=swapA;
+    swapA=swapB;
+    swapB=swapC;
+    ej.innerHTML += `<p>Valores finales:</p><p>A = ${swapA} | B = ${swapB}</p>`;
+}
+let borrarEj20 = document.querySelector("#borrar-ej20");
+borrarEj20.onclick = function borrarEjercicio() {
+    let ej = document.querySelector("#ej20");
+    ej.innerHTML = ``;
+}
+
+let realizarEj21 = document.querySelector("#realizar-ej21");
+realizarEj21.onclick = function realizarEjercicio() {
+    alert("21. Leer por pantalla dos números enteros, e imprimirlos por pantalla en orden creciente.");
+    let x = Number.parseInt(prompt("Introduzca el primer número:"));
+    let y = Number.parseInt(prompt("Introduzca el segundo número:"));
+    let ej = document.querySelector("#ej21");
+    if (x>y) {
+        ej.innerHTML = `<p>Números en orden creciente:<p></p>${y}, ${x}</p>`;
+    } else if (x<y) {
+        ej.innerHTML = `<p>Números en orden creciente:<p></p>${x}, ${y}</p>`;
+    } else {
+        ej.innerHTML = `<p>Son iguales los números ${x} y ${y}</p>`;
+    }
+}
+let borrarEj21 = document.querySelector("#borrar-ej21");
+borrarEj21.onclick = function borrarEjercicio() {
+    let ej = document.querySelector("#ej21");
+    ej.innerHTML = ``;
+}
+
+let realizarEj22 = document.querySelector("#realizar-ej22");
+realizarEj22.onclick = function realizarEjercicio() {
+    alert("22. Leer por pantalla tres números enteros, e imprimirlos por pantalla en orden creciente.");
+    let numA = Number.parseInt(prompt("Introduzca el primer número:"));
+    let numB = Number.parseInt(prompt("Introduzca el segundo número:"));
+    let numC = Number.parseInt(prompt("Introduzca el tercer número:"));
+    let numD;
+    let ej = document.querySelector("#ej22");
+    if (numA>numC) {
+        numD=numA;
+        numA=numC;
+        numC=numD;
+    }
+    if (numA>numB) {
+        numD=numA;
+        numA=numB;
+        numB=numD;
+    }
+    if (numB>numC) {
+        numD=numB;
+        numB=numC;
+        numC=numD;
+    }
+    ej.innerHTML = `<p>Números en orden creciente:<p></p>${numA}, ${numB}, ${numC}</p>`;
+}
+let borrarEj22 = document.querySelector("#borrar-ej22");
+borrarEj22.onclick = function borrarEjercicio() {
+    let ej = document.querySelector("#ej22");
+    ej.innerHTML = ``;
+}
+
+let realizarEj23 = document.querySelector("#realizar-ej23");
+realizarEj23.onclick = function realizarEjercicio() {
+    alert("23. Repetir el ejercicio anterior, e imprimirlos en orden decreciente.");
+    let numA = Number.parseInt(prompt("Introduzca el primer número:"));
+    let numB = Number.parseInt(prompt("Introduzca el segundo número:"));
+    let numC = Number.parseInt(prompt("Introduzca el tercer número:"));
+    let numD;
+    let ej = document.querySelector("#ej23");
+    if (numA>numC) {
+        numD=numA;
+        numA=numC;
+        numC=numD;
+    }
+    if (numA>numB) {
+        numD=numA;
+        numA=numB;
+        numB=numD;
+    }
+    if (numB>numC) {
+        numD=numB;
+        numB=numC;
+        numC=numD;
+    }
+    ej.innerHTML = `<p>Números en orden decreciente:<p></p>${numC}, ${numB}, ${numA}</p>`;
+}
+let borrarEj23 = document.querySelector("#borrar-ej23");
+borrarEj23.onclick = function borrarEjercicio() {
+    let ej = document.querySelector("#ej23");
+    ej.innerHTML = ``;
+}
+
+let realizarEj24 = document.querySelector("#realizar-ej24");
+realizarEj24.onclick = function realizarEjercicio() {
+    alert("24. Lea un número por pantalla y determine si es múltiplo de 10.");
+    let multDiez = Number.parseInt(prompt("Introduzca un número:"));
+    let ej = document.querySelector("#ej24");
+    if (multDiez%10==0) {
+    ej.innerHTML = `<p>El número ${multDiez} es múltiplo de 10:</p><p>${multDiez}/10 = ${multDiez/10}</p>`;
+    } else {
+    ej.innerHTML = `<p>El número ${multDiez} NO es múltiplo de 10</p>`;
+    }
+}
+let borrarEj24 = document.querySelector("#borrar-ej24");
+borrarEj24.onclick = function borrarEjercicio() {
+    let ej = document.querySelector("#ej24");
+    ej.innerHTML = ``;
+}
+//NO FUFA
+let realizarEj25 = document.querySelector("#realizar-ej25");
+realizarEj25.onclick = function realizarEjercicio() {
+    alert("25. Leer por pantalla un número de tres cifras, e imprimir cada una de sus cifras en una línea.");
+    let tresCifras = Number.parseInt(prompt("Introduzca un número de 3 cifras:"));
+    let ej = document.querySelector("#ej25");
+    if (tresCifras>=100 && tresCifras<=999) {
+        let cifra1 = tresCifras / 100;
+        let cifra2 = (tresCifras - cifra1 * 100) / 10;
+        let cifra3 = (tresCifras - cifra1 * 100 - cifra2 * 10);
+        ej.innerHTML = `<p>${cifra1}</p><p>${cifra2}</p><p>${cifra3}</p>`;
+    } else {
+        ej.innerHTML = `Número no valido`;
+    }
+}
+let borrarEj25 = document.querySelector("#borrar-ej25");
+borrarEj25.onclick = function borrarEjercicio() {
+    let ej = document.querySelector("#ej25");
+    ej.innerHTML = ``;
+}
 /*
-//20. A partir de aquí, los ejercicios son complicados. No se frustre si no le salen.
-System.out.println("Ejercicio 20: consejo (no ejercicio)");
-//Vale, gracias por el consejo.
-
-//20b (swap)
-System.out.println("Ejercicio 20: swapping");
-System.out.print("Introduzca el primer numero: ");
-int swapA = sc.nextInt();
-System.out.print("Introduzca el segundo numero: ");
-int swapB = sc.nextInt();
-int swapC;
-System.out.println("valores originales: A=" + swapA + " | B=" + swapB);
-swapC=swapA;
-swapA=swapB;
-swapB=swapC;
-System.out.println("valores finales: A=" + swapA + " | B=" + swapB);
-
-//21. Leer por pantalla dos números enteros, e imprimirlos por pantalla en orden creciente.
-System.out.println("Ejercicio 21: ordenación 2 números");
-System.out.println("Introduzca 2 números a ordenar: ");
-int x = sc.nextInt();
-int y = sc.nextInt();
-if (x>y) {
-    System.out.println("Números en orden creciente: " + y + ", " + x);
-} else if (x<y) {
-    System.out.println("Números en orden creciente: " + x + ", " + y);
-} else {
-    System.out.println("Son iguales " + x + " y " + y);
-}
-
-//22. Leer por pantalla tres números enteros, e imprimirlos por pantalla en orden
-//creciente.
-System.out.println("Ejercicio 22: ordenación 3 números");
-System.out.println("Introduzca 3 números a ordenar (parte 1): ");
-int numA = sc.nextInt();
-int numB = sc.nextInt();
-int numC = sc.nextInt();
-int numD;
-if (numA>numC) {
-    numD=numA;
-    numA=numC;
-    numC=numD;
-}
-if (numA>numB) {
-    numD=numA;
-    numA=numB;
-    numB=numD;
-}
-if (numB>numC) {
-    numD=numB;
-    numB=numC;
-    numC=numD;
-}
-System.out.println("Números en orden creciente: " + numA + ", " + numB + ", " + numC);
-
-if (numA>numB) {
-    // c > a; b > c; a>c&&c>b
-    if (numC>numA){
-        System.out.println("Números en orden creciente: " + numB + ", " + numA + ", " + numC);
-    } else if (numB>numC) {
-        System.out.println("Números en orden creciente: " + numC + ", " + numB + ", " + numA);
-    } else {
-        System.out.println("Números en orden creciente: " + numB + ", " + numC + ", " + numA);
-    }
-} else if (numB>numA) {
-    //c>b; a>c; b>c&&c>a
-    if (numC>numB){
-        System.out.println("Números en orden creciente: " + numA + ", " + numB + ", " + numC);
-    } else if (numA>numC) {
-        System.out.println("Números en orden creciente: " + numC + ", " + numA + ", " + numB);
-    } else {
-        System.out.println("Números en orden creciente: " + numA + ", " + numC + ", " + numB);
-    }
-} else {
-    System.out.println("Algunos de los números introducidos son equivalentes");
-}
-
-
-//23. Repetir el ejercicio anterior, e imprimirlos en orden decreciente.
-System.out.println("Ejercicio 23: ordenación 3 números inversamente");
-System.out.println("Introduzca 3 números a ordenar (parte 2): ");
-    int numA2 = sc.nextInt();
-int numB2 = sc.nextInt();
-int numC2 = sc.nextInt();
-if (numA2>numB2) {
-   // c > a; b > c; a>c&&c>b
-    if (numC2>numA2){
-        System.out.println("Números en orden decreciente: " + numC2 + ", " + numA2 + ", " + numB2);
-    } else if (numB2>numC2) {
-        System.out.println("Números en orden decreciente: " + numA2 + ", " + numB2 + ", " + numC2);
-    } else {
-        System.out.println("Números en orden decreciente: " + numA2 + ", " + numC2 + ", " + numB2);
-    }
-} else if (numB2>numA2) {
-    //c>b; a>c; b>c&&c>a
-    if (numC2>numB2){
-        System.out.println("Números en orden decreciente: " + numC2 + ", " + numB2 + ", " + numA2);
-    } else if (numA>numC) {
-        System.out.println("Números en orden decreciente: " + numB2 + ", " + numA2 + ", " + numC2);
-    } else {
-        System.out.println("Números en orden decreciente: " + numB2 + ", " + numC2 + ", " + numA2);
-    }
-} else {
-    System.out.println("Algunos de los números introducidos son equivalentes");
-}
-
-System.out.println("Números en orden decreciente: " + numC + ", " + numB + ", " + numA);
-
-//24. Lea un número por pantalla y determine si es múltiplo de 10 (use el operador módulo).
-System.out.println("Ejercicio 24: Prueba múltiplo de 10");
-System.out.print("Introduzca un número: ");
-int multDiez = sc.nextInt();
-String esMul = (multDiez%10==0) ?  ("Es múltiplo de 10: " + multDiez/10) : "No es múltiplo de 10";
-System.out.println(esMul);
-
-//if (multDiez%10==0) {
-//    System.out.println("Es múltiplo de 10: " + multDiez/10);
-//} else {
-//    System.out.println("No es múltiplo de 10");
-//}
-
-
 //25. Leer por pantalla un número de tres cifras, e imprimir cada una de sus cifras en una línea.
 System.out.println("Ejercicio 25: 3 cifras en 3 lineas");
 System.out.print("Introduzca un numero de 3 cifras: ");
