@@ -541,16 +541,16 @@ borrarEj24.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej24");
     ej.innerHTML = ``;
 }
-//NO FUFA
+
 let realizarEj25 = document.querySelector("#realizar-ej25");
 realizarEj25.onclick = function realizarEjercicio() {
     alert("25. Leer por pantalla un número de tres cifras, e imprimir cada una de sus cifras en una línea.");
     let tresCifras = Number.parseInt(prompt("Introduzca un número de 3 cifras:"));
     let ej = document.querySelector("#ej25");
     if (tresCifras>=100 && tresCifras<=999) {
-        let cifra1 = tresCifras / 100;
-        let cifra2 = (tresCifras - cifra1 * 100) / 10;
-        let cifra3 = (tresCifras - cifra1 * 100 - cifra2 * 10);
+        let cifra1 = Math.trunc(tresCifras/100);
+        let cifra2 = Math.trunc((tresCifras - cifra1 * 100) / 10);
+        let cifra3 = Math.trunc((tresCifras - cifra1 * 100 - cifra2 * 10));
         ej.innerHTML = `<p>${cifra1}</p><p>${cifra2}</p><p>${cifra3}</p>`;
     } else {
         ej.innerHTML = `Número no valido`;
@@ -561,69 +561,44 @@ borrarEj25.onclick = function borrarEjercicio() {
     let ej = document.querySelector("#ej25");
     ej.innerHTML = ``;
 }
-/*
-//25. Leer por pantalla un número de tres cifras, e imprimir cada una de sus cifras en una línea.
-System.out.println("Ejercicio 25: 3 cifras en 3 lineas");
-System.out.print("Introduzca un numero de 3 cifras: ");
-int tresCifras = sc.nextInt();
-if (tresCifras>=100 && tresCifras<999) {
-    int cifra1 = tresCifras / 100;
-    int cifra2 = (tresCifras - cifra1 * 100) / 10;
-    int cifra3 = (tresCifras - cifra1 * 100 - cifra2 * 10);
-    System.out.println(cifra1 + "\n" + cifra2 + "\n" + cifra3);
-} else {
-    System.out.println("Número no valido");
+
+let realizarEj26 = document.querySelector("#realizar-ej26");
+realizarEj26.onclick = function realizarEjercicio() {
+    alert("26. Calculadora Inversa:");
+    let operando1 = prompt("Introduzca un número:");
+    let operando2 = prompt("Introduzca otro número:");
+    let operacion = prompt("Introduzca la operación (sólo puede ser + - * : %):");
+    let ej = document.querySelector("#ej26");
+    let resultado = `${operando1}${operacion}${operando2}`;
+    let solucion = eval(resultado);
+    ej.innerHTML = `<p>${operando1} ${operacion} ${operando2} = ${solucion} </p>`;
+}
+let borrarEj26 = document.querySelector("#borrar-ej26");
+borrarEj26.onclick = function borrarEjercicio() {
+    let ej = document.querySelector("#ej26");
+    ej.innerHTML = ``;
 }
 
-//26. Crea una aplicación llamada CalculadoraInversa, que lea por pantalla dos operandos
-//(String) y un signo aritmético (String), y según este último se realizará la operación
-//correspondiente. Al final mostrará el resultado en consola. Los signos aritméticos
-//disponibles son:
-//+: suma los dos operandos.
-//-: resta los operandos.
-/: multiplica los operandos.
-///: divide los operandos, este debe dar un resultado con decimales (double)
-//%: módulo, resto de la división entre operando1 y operando2.
-//Para leer por pantalla usar únicamente nextLine.
-System.out.println("Ejercicio 26: Calculadora Inversa");
-System.out.println("Introduzca el primer operando");
-float op1 = sc.nextInt();
-System.out.println("Introduzca el segundo operando");
-float op2 = sc.nextInt();
-System.out.println("Introduzca la operación que desee realizar:");
-String operacion = sc.next();
-switch (operacion) {
-    case "suma" -> System.out.println("El resultado de la suma de ambos números es: " + (op1 + op2));
-    case "resta" -> System.out.println("El resultado de la resta de ambos números es: " + (op1 - op2));
-    case "multiplicacion" -> System.out.println("El resultado de la multiplicacion de ambos números es: " + (op1 * op2));
-    case "division" -> System.out.println("El resultado de la division de ambos números es: " + (op1 / op2));
-    case "resto" -> System.out.println("El resto de dividir" + op1 + " entre " + op2 + "es: " + op1%op2);
-    default -> System.out.println("Operación no disponible");
+let realizarEj27 = document.querySelector("#realizar-ej27");
+realizarEj27.onclick = function realizarEjercicio() {
+    alert("27. Lanzando los dados...");
+    let dado1 = Math.floor(Math.random()*6)+1;
+    let dado2 = Math.floor(Math.random()*6)+1;
+    let dado3 = Math.floor(Math.random()*6)+1;
+    let ej = document.querySelector("#ej27");
+    if (dado1==6 && dado2==6 && dado3==6) {
+        ej.innerHTML = `<p>Muy buena suerte</p>`;
+    } else if (dado1==6 && dado2==6 || dado1==6 && dado3==6 || dado2==6 && dado3==6) {
+        ej.innerHTML = `<p>Buena suerte</p>`;
+    } else if (dado1==6 || dado2==6 || dado3==6) {
+        ej.innerHTML = `<p>Mala suerte</p>`;
+    } else {
+        ej.innerHTML = `<p>Muy mala suerte</p>`;
+    }
+    ej.innerHTML += `<p>Tus dados fueron:</p><p>Dado 1: ${dado1}</p><p>Dado 2: ${dado2}</p><p>Dado 3: ${dado3}</p>`;
 }
-System.out.println("------------FIN------------");
-System.out.println();
-
-//27. En un casino de juegos se desea mostrar los mensajes respectivos por el puntaje
-//obtenido en el lanzamiento de tres dados de un cliente, de acuerdo a los siguientes
-//resultados:
-//Si los tres dados son seis, mostrar el mensaje “Muy buena suerte”
-//Si dos dados son seis, mostrar el mensaje “Buena suerte”
-//Si un dado es seis, mostrar el mensaje “Mala Suerte”
-//Si ningún dado se obtiene seis, mostrar el mensaje “Muy mala suerte”
-//Simule los lanzamientos con tres números aleatorios, usando instrucciones Java que los genere.
-System.out.println("Ejercicio 27: Dados");
-Random rand = new Random();
-System.out.println("Lanzando los dados...");
-int dado1 = rand.nextInt(1,7);
-int dado2 = rand.nextInt(1,7);
-int dado3 = rand.nextInt(1,7);
-System.out.println("La combinación de los dados es: " + dado1 + ", " + dado2 + ", " + dado3);
-if (dado1==6 && dado2==6 && dado3==6) {
-    System.out.println("Muy buena suerte");
-} else if (dado1==6 && dado2==6 || dado1==6 && dado3==6 || dado2==6 && dado3==6) {
-    System.out.println("Buena suerte");
-} else if (dado1==6 || dado2==6 || dado3==6) {
-    System.out.println("Mala suerte");
-} else {
-    System.out.println("Muy mala suerte");
-}*/
+let borrarEj27 = document.querySelector("#borrar-ej27");
+borrarEj27.onclick = function borrarEjercicio() {
+    let ej = document.querySelector("#ej27");
+    ej.innerHTML = ``;
+}
