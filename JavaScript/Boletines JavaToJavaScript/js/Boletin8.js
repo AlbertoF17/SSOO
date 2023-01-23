@@ -16,9 +16,19 @@ realizarEj1.onclick = function realizarEjercicio() {
         } else {
             ej.innerHTML = `<p>ERROR</p>`;
         }
-    }, 1000);
-    // SOLO EL PRIMER BUCLE HECHO
-    
+    }, 500);
+
+    // ej.innerHTML = `<p>for(int i=20; i>=0; i--) {</p>
+    //                 <p>System.out.println(i);</p>
+    //                 <p>}</p>`;
+    // setTimeout(function() {
+    //     let numItUsuario = Number.parseInt(prompt("¿Cuántas veces se ejecutará este bucle?"));
+    //     if (numItUsuario == 20){
+    //         ej.innerHTML = `<p>CORRECTO</p>`;
+    //     } else {
+    //         ej.innerHTML = `<p>ERROR</p>`;
+    //     }
+    // }, 1000);
 }
 let borrarEj1 = document.querySelector("#borrar-ej1");
 borrarEj1.onclick = function borrarEjercicio() {
