@@ -17,7 +17,7 @@ realizarEj1.onclick = function realizarEjercicio() {
         }
     })
 
-
+//ESTO NO FUFA BIEN
     // ej.innerHTML = `<p>for(int i=20; i>=0; i--) {</p>
     //                 <p>System.out.println(i);</p>
     //                 <p>}</p>`;
