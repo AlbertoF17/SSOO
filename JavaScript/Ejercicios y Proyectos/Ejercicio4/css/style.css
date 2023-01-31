@@ -17,4 +17,16 @@ div{
     box-shadow: 1px 1px 1px black;
     font-size: 2rem;
     text-align: center;
+    background-color: aquamarine;
+    border-radius: 1rem;
+}
+
+div:hover {
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-50px); }
+  100% { transform: translateY(0); }
 }
