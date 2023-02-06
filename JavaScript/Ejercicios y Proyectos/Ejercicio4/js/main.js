@@ -1,3 +1,5 @@
+//CODED BY AlbertoF17
+
 //Dado el array: const array = ["Joaquin", 1, ["Hola","Adios"], true]
 const array = ["Joaquin", 1,["Hola","Adios"], true];
 //1) Recorrer el array e insertar dichos valores en el localstorage. El key de cada valor corresponderá a variable + i siendo i el indice en el que se encuentra el array.
@@ -9,6 +11,7 @@ for (elemento in array){
 for (elemento in array){
     console.log(localStorage.getItem("variable" + elemento));
 }
+//He realizado el console.log para que la petción de la variable se muestre por consola.
 
 //3) Crear un div por cada variable e insertar el valor de dicha variable en el div.
 let div1 = document.createElement("DIV");
