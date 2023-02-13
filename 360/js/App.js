@@ -2,8 +2,6 @@ import './styles/style.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-
-const axios = require('axios');
 function App() {
     const CLIENT_ID = "0509929fbb7c4cb7af584c20631675b8";
     const REDIRECT_URI = "http://localhost:5500/360";
@@ -35,18 +33,6 @@ function App() {
         window.localStorage.removeItem("token")
     }
 
-    return (
-        <div className="App">
-            <header className="App-header">
-                <h1>Spotify React</h1>
-                {!token ?
-                    <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>Login
-                        to Spotify</a>
-                    : <button onClick={logout}>Logout</button>}
-            </header>
-        </div>
-    );
-
     const searchArtists = async (e) => {
         e.preventDefault()
         const {data} = await axios.get("https://api.spotify.com/v1/search", {
@@ -70,6 +56,18 @@ function App() {
         ))
     }
     {renderArtists()}
+
+    return (
+        <div className="App">
+            <header className="App-header">
+                <h1>Spotify React</h1>
+                {!token ?
+                    <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>Login
+                        to Spotify</a>
+                    : <button onClick={logout}>Logout</button>}
+            </header>
+        </div>
+    );
 }
 
 export default App;
