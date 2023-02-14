@@ -13,8 +13,8 @@ for (let elemento of array){
         }
     }else{
         localStorage.setItem("variable" + cont, elemento);
-    }
-    cont++;
+        cont++;
+    }   
 }
 
 //2) Recorrer de 0 a la longitud del array y hacer la peticion de variable + i del localstorage.
@@ -22,9 +22,9 @@ for (let elemento of array){
 //4) Insertar estos divs en el body del html.
 const body = document.querySelector("body");
 for (let i = 0; i < cont; i++){
-    console.log(localStorage.getItem("variable" + cont));
+    console.log(localStorage.getItem("variable" + i));
     let div1 = document.createElement("DIV");
-    div1.textContent = localStorage.getItem("variable" + cont);
+    div1.textContent = localStorage.getItem("variable" + i);
     body.appendChild(div1);
 }
 //He realizado el console.log para que la petción de la variable se muestre por consola.
