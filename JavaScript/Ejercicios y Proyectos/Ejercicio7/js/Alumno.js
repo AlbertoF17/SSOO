@@ -1,13 +1,17 @@
-function Alumno(nombre, apellido, dni, notaMarcas, notaEntornos, notaFOL, notaBBDD, notaProg, notaSSOO) {
-    Persona.call(this, nombre, apellido, dni);
-    this.notaMarcas = notaMarcas;
-    this.notaEntornos = notaEntornos;
-    this.notaFOL = notaFOL;
-    this.notaBBDD = notaBBDD;
+import { Persona } from "./Persona.js";
+
+export class Alumno extends Persona{
+    constructor(nombre, apellido, dni, notaProg, notaSist, notaMarc, notaBbdd, notaEntornos, notaFol) {
+    super(nombre, apellido, dni);
     this.notaProg = notaProg;
-    this.notaSSOO = notaSSOO;
+    this.notaSist = notaSist;
+    this.notaMarc = notaMarc;
+    this.notaBbdd = notaBbdd;
+    this.notaEntornos = notaEntornos;
+    this.notaFol = notaFol;
 
     function saludar(){
         console.log(`Hola, soy ${nombre}`);
     }
   }
+}
