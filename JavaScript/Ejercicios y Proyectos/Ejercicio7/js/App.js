@@ -5,7 +5,7 @@ fetch("../json/alumnos.json")
   .then(data => {
     data.alumnos.forEach(alumno => {
       const nuevoAlumno = new Alumno(alumno.nombre, alumno.apellido, alumno.dni, alumno.notaProg,
-      alumno.notaSist, alumno.notaMarc, alumno.notaBbdd, alumno.notaEntornos, alumno,notaFol);
+      alumno.notaSist, alumno.notaMarc, alumno.notaBbdd, alumno.notaEntornos, alumno.notaFol);
 
       const tarjeta = document.createElement('div');
       tarjeta.classList.add('card');
