@@ -40,6 +40,9 @@ fetch("json/alumnos.json")
       const notaFol = document.createElement('p');
       notaFol.textContent = `FOL: ${nuevoAlumno.notaFol}`;
 
+      const saludo = document.createElement('p');
+      saludo.textContent = nuevoAlumno.saludar();
+
       tarjeta.appendChild(nombre);
       tarjeta.appendChild(apellido);
       tarjeta.appendChild(dni);
@@ -50,6 +53,7 @@ fetch("json/alumnos.json")
       tarjeta.appendChild(notaBbdd);
       tarjeta.appendChild(notaEntornos);
       tarjeta.appendChild(notaFol);
+      tarjeta.appendChild(saludo);
 
       document.body.appendChild(tarjeta);
     });
